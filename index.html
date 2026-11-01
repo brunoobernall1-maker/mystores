@@ -5,28 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Essência Elegante | Perfumes & Acessórios</title>
 
-  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       background-color: #f9f6f2;
       font-family: 'Montserrat', sans-serif;
       color: #2e2e2e;
       line-height: 1.5;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* HEADER */
     header {
@@ -37,17 +29,8 @@
       z-index: 100;
       padding: 15px 0;
     }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-weight: 600;
-      color: #1f1f1f;
-    }
+    .header-content { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 600; color: #1f1f1f; }
     .logo span { color: #b8860b; font-style: italic; font-weight: 400; }
     nav ul { display: flex; list-style: none; gap: 32px; }
     nav a {
@@ -64,6 +47,9 @@
       position: relative;
       font-size: 20px;
       color: #2e2e2e;
+      background: none;
+      border: none;
+      cursor: pointer;
       transition: color 0.3s;
     }
     .cart-icon:hover { color: #b8860b; }
@@ -89,12 +75,7 @@
       padding: 70px 0;
       border-bottom: 1px solid rgba(184,134,11,0.15);
     }
-    .hero-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-    }
+    .hero-content { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
     .hero-text { flex: 1; }
     .hero-text h1 {
       font-family: 'Playfair Display', serif;
@@ -123,6 +104,8 @@
       letter-spacing: 1px;
       font-weight: 500;
       border-radius: 2px;
+      border: none;
+      cursor: pointer;
       transition: background 0.3s, transform 0.2s;
     }
     .btn:hover { background-color: #9e7209; transform: translateY(-2px); }
@@ -151,6 +134,35 @@
       margin: 12px auto 0;
     }
 
+    /* FILTROS */
+    .filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0 10px;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid #d8cfc1;
+      color: #5a5a5a;
+      padding: 8px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .filter-btn:hover { border-color: #b8860b; color: #b8860b; }
+    .filter-btn.active {
+      background-color: #b8860b;
+      border-color: #b8860b;
+      color: #fff;
+    }
+
     /* PRODUTOS */
     .products-grid {
       display: grid;
@@ -165,6 +177,8 @@
       transition: transform 0.3s, box-shadow 0.3s;
       box-shadow: 0 5px 15px rgba(0,0,0,0.03);
       border: 1px solid #f0eae3;
+      display: flex;
+      flex-direction: column;
     }
     .product-card:hover {
       transform: translateY(-8px);
@@ -174,10 +188,18 @@
       width: 100%;
       height: 260px;
       object-fit: cover;
-      display: block;
       background-color: #faf7f2;
+      display: block;
     }
-    .product-info { padding: 18px 16px 20px; text-align: center; }
+    .product-info { padding: 18px 16px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; }
+    .product-category {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #b8860b;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
     .product-name {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
@@ -196,6 +218,7 @@
       font-weight: 600;
       color: #b8860b;
       margin-bottom: 14px;
+      margin-top: auto;
     }
     .add-to-cart {
       background-color: transparent;
@@ -222,27 +245,13 @@
       margin: 30px 0 60px;
       border-radius: 4px;
     }
-    .promo-banner p {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-style: italic;
-    }
+    .promo-banner p { font-family: 'Playfair Display', serif; font-size: 26px; font-style: italic; }
     .promo-banner i { color: #b8860b; margin: 0 8px; }
 
     /* FEATURES */
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      margin: 50px 0 60px;
-    }
+    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin: 50px 0 60px; }
     .feature-item { text-align: center; max-width: 220px; }
-    .feature-icon {
-      font-size: 32px;
-      color: #b8860b;
-      margin-bottom: 15px;
-    }
+    .feature-icon { font-size: 32px; color: #b8860b; margin-bottom: 15px; }
     .feature-item h4 {
       font-size: 16px;
       font-weight: 600;
@@ -253,43 +262,14 @@
     .feature-item p { font-size: 14px; color: #6b6b6b; font-weight: 300; }
 
     /* FOOTER */
-    footer {
-      background-color: #fff;
-      border-top: 1px solid #ede6dd;
-      padding: 40px 0 25px;
-    }
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-    }
-    .footer-brand h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-    .footer-brand p {
-      color: #7a7a7a;
-      font-size: 14px;
-      max-width: 250px;
-      font-weight: 300;
-    }
-    .footer-links h4 {
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 18px;
-      font-weight: 600;
-    }
+    footer { background-color: #fff; border-top: 1px solid #ede6dd; padding: 40px 0 25px; }
+    .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 12px; }
+    .footer-brand p { color: #7a7a7a; font-size: 14px; max-width: 250px; font-weight: 300; }
+    .footer-links h4 { font-size: 15px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; font-weight: 600; }
     .footer-links ul { list-style: none; }
     .footer-links li { margin-bottom: 8px; }
-    .footer-links a {
-      text-decoration: none;
-      color: #6b6b6b;
-      font-size: 14px;
-      font-weight: 300;
-    }
+    .footer-links a { text-decoration: none; color: #6b6b6b; font-size: 14px; font-weight: 300; }
     .footer-links a:hover { color: #b8860b; }
     .social-icons { display: flex; gap: 16px; margin-top: 15px; }
     .social-icons a { color: #2e2e2e; font-size: 18px; transition: color 0.3s; }
@@ -302,6 +282,150 @@
       color: #8f8f8f;
       font-size: 13px;
       font-weight: 300;
+    }
+
+    /* ====== CARRINHO LATERAL ====== */
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 200;
+    }
+    .cart-overlay.open { opacity: 1; visibility: visible; }
+
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+      z-index: 201;
+      display: flex;
+      flex-direction: column;
+    }
+    .cart-sidebar.open { transform: translateX(0); }
+
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #f0eae3;
+    }
+    .cart-header h3 { font-family: 'Playfair Display', serif; font-size: 22px; }
+    .cart-close {
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #2e2e2e;
+    }
+    .cart-close:hover { color: #b8860b; }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px 20px;
+    }
+    .cart-empty {
+      text-align: center;
+      color: #999;
+      padding: 40px 0;
+      font-size: 14px;
+    }
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      padding: 15px 0;
+      border-bottom: 1px solid #f5f0ea;
+      align-items: center;
+    }
+    .cart-item img {
+      width: 60px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 3px;
+      background-color: #faf7f2;
+    }
+    .cart-item-info { flex: 1; }
+    .cart-item-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 600; }
+    .cart-item-price { font-size: 13px; color: #b8860b; font-weight: 600; margin-top: 3px; }
+    .cart-item-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .qty-btn {
+      width: 24px;
+      height: 24px;
+      border: 1px solid #d8cfc1;
+      background: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .qty-btn:hover { background: #b8860b; color: #fff; border-color: #b8860b; }
+    .qty-value { font-size: 14px; font-weight: 600; min-width: 20px; text-align: center; }
+    .remove-btn {
+      background: none;
+      border: none;
+      color: #c0392b;
+      font-size: 13px;
+      cursor: pointer;
+      margin-left: auto;
+      transition: opacity 0.2s;
+    }
+    .remove-btn:hover { opacity: 0.7; }
+
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid #f0eae3;
+      background-color: #faf8f5;
+    }
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+    .cart-total strong { font-size: 20px; color: #b8860b; }
+    .btn-whatsapp {
+      width: 100%;
+      background-color: #25D366;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background 0.3s;
+    }
+    .btn-whatsapp:hover { background-color: #1ebe5a; }
+    .btn-whatsapp:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
     }
 
     /* RESPONSIVO */
@@ -328,16 +452,15 @@
       <nav>
         <ul>
           <li><a href="#">Início</a></li>
-          <li><a href="#produtos">Perfumes</a></li>
-          <li><a href="#produtos">Acessórios</a></li>
+          <li><a href="#produtos">Produtos</a></li>
           <li><a href="#">Sobre</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
-      <a href="#" class="cart-icon">
+      <button class="cart-icon" id="open-cart" aria-label="Abrir carrinho">
         <i class="fas fa-shopping-bag"></i>
         <span class="cart-count" id="cart-count">0</span>
-      </a>
+      </button>
     </div>
   </header>
 
@@ -350,15 +473,18 @@
         <a href="#produtos" class="btn">Explorar coleção</a>
       </div>
       <div class="hero-image">
-        <!-- 🖼️ TROQUE A IMAGEM DO BANNER PRINCIPAL AQUI -->
         <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=800&auto=format&fit=crop" alt="Perfume elegante" style="max-width:100%; border-radius:8px;">
       </div>
     </div>
   </section>
 
-  <!-- PRODUTOS (gerados automaticamente) -->
+  <!-- PRODUTOS -->
   <div class="container" id="produtos">
     <h2 class="section-title">Nossos Favoritos</h2>
+
+    <!-- FILTROS -->
+    <div class="filters" id="filters"></div>
+
     <div class="products-grid" id="products-grid"></div>
   </div>
 
@@ -427,7 +553,27 @@
     </div>
   </footer>
 
-  <!-- ⚠️ AQUI CARREGA OS PRODUTOS -->
+  <!-- ====== CARRINHO LATERAL ====== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Seu carrinho</h3>
+      <button class="cart-close" id="close-cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">Seu carrinho está vazio.<br>Adicione produtos para começar 😊</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cart-total">R$ 0,00</strong>
+      </div>
+      <button class="btn-whatsapp" id="finalizar-whatsapp" disabled>
+        <i class="fab fa-whatsapp"></i> Finalizar no WhatsApp
+      </button>
+    </div>
+  </aside>
+
   <script src="produtos.js"></script>
 </body>
 </html>
