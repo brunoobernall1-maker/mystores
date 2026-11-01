@@ -1,51 +1,67 @@
 // ============================================
-// 🛍️ EDITE AQUI SEUS PRODUTOS
+// 🛍️ PRODUTOS - EDITE AQUI
 // ============================================
-// "categoria" define o filtro. Use valores iguais para agrupar.
-// Ex: "Perfumes", "Acessórios", "Kits"
-//
-// Para trocar imagem:
-//   - "imagens/nome-da-foto.jpg" (se colocar a foto na pasta imagens)
-//   - OU link direto: "https://..."
-//
-// Para adicionar: copie um bloco { ... } inteiro e cole antes do ]
+// "categoria" define o filtro (use nomes iguais para agrupar)
+// "imagem": use "imagens/foto.jpg" OU um link "https://..."
+// "preco": apenas números (ex: 289.90)
 // ============================================
 
 const produtos = [
   {
     nome: "Noir Intense",
     categoria: "Perfumes",
-    descricao: "Amadeirado · Masculino",
+    descricao: "Amadeirado · Masculino · 100ml",
     preco: 289.90,
     imagem: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600&auto=format&fit=crop"
   },
   {
     nome: "Rose Éternelle",
     categoria: "Perfumes",
-    descricao: "Floral · Feminino",
+    descricao: "Floral · Feminino · 100ml",
     preco: 259.90,
     imagem: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=600&auto=format&fit=crop"
   },
   {
     nome: "Citrus Burst",
     categoria: "Perfumes",
-    descricao: "Cítrico · Unissex",
+    descricao: "Cítrico · Unissex · 75ml",
     preco: 199.90,
     imagem: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=600&auto=format&fit=crop"
   },
   {
     nome: "Oud Royal",
     categoria: "Perfumes",
-    descricao: "Oriental · Masculino",
+    descricao: "Oriental · Masculino · 100ml",
     preco: 349.90,
     imagem: "https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=600&auto=format&fit=crop"
   },
   {
+    nome: "Velvet Vanilla",
+    categoria: "Perfumes",
+    descricao: "Baunilha · Feminino · 50ml",
+    preco: 179.90,
+    imagem: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    nome: "Ocean Breeze",
+    categoria: "Perfumes",
+    descricao: "Aquático · Unissex · 100ml",
+    preco: 219.90,
+    imagem: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600&auto=format&fit=crop"
+  },
+  {
     nome: "Kit Presente Luxo",
     categoria: "Kits",
-    descricao: "Perfume + Hidratante",
+    descricao: "Perfume + Hidratante + Bolsa",
     preco: 399.90,
     imagem: "https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    nome: "Kit Descobrir",
+    categoria: "Kits",
+    descricao: "5 miniaturas de perfumes",
+    preco: 149.90,
+    imagem: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=600&auto=format&fit=crop"
   },
   {
     nome: "Estojo Veludo",
@@ -57,7 +73,7 @@ const produtos = [
   {
     nome: "Vela Aromática",
     categoria: "Acessórios",
-    descricao: "Lavanda & Baunilha",
+    descricao: "Lavanda & Baunilha · 200g",
     preco: 69.90,
     imagem: "https://images.unsplash.com/photo-1602874801006-e26c4c5b5e8a?q=80&w=600&auto=format&fit=crop"
   }
@@ -67,17 +83,17 @@ const produtos = [
 // ⚙️ CONFIGURAÇÕES GERAIS
 // ============================================
 const CONFIG = {
-  // 👇 COLOQUE SEU NÚMERO AQUI (com código do país e DDD, só números)
-  // Exemplo Brasil: 5511999999999 (55 + DDD + número)
+  // 👇 TROQUE PELO SEU NÚMERO DO WHATSAPP (só números)
+  // Formato: 55 + DDD + número
+  // Exemplo: 5511987654321
   whatsapp: "5511999999999",
-  // Nome que aparece na mensagem
   nomeLoja: "Essência Elegante"
 };
 
 // ============================================
 // 🧠 LÓGICA (não precisa mexer)
 // ============================================
-let carrinho = [];        // [{ nome, preco, imagem, quantidade }]
+let carrinho = [];
 let categoriaAtiva = "Todos";
 
 const grid = document.getElementById('products-grid');
@@ -89,7 +105,6 @@ const cartSidebar = document.getElementById('cart-sidebar');
 const cartOverlay = document.getElementById('cart-overlay');
 const btnWhats = document.getElementById('finalizar-whatsapp');
 
-// Formata preço
 function formatarPreco(valor) {
   return 'R$ ' + valor.toFixed(2).replace('.', ',');
 }
@@ -191,11 +206,9 @@ function calcularTotal() {
 }
 
 function renderCarrinho() {
-  // Contador no header
   const totalItens = carrinho.reduce((soma, item) => soma + item.quantidade, 0);
   cartCountEl.textContent = totalItens;
 
-  // Lista
   if (carrinho.length === 0) {
     cartItemsEl.innerHTML = '<div class="cart-empty">Seu carrinho está vazio.<br>Adicione produtos para começar 😊</div>';
     btnWhats.disabled = true;
@@ -226,7 +239,6 @@ function renderCarrinho() {
     btnWhats.disabled = false;
   }
 
-  // Total
   cartTotalEl.textContent = formatarPreco(calcularTotal());
 }
 
@@ -257,4 +269,13 @@ btnWhats.addEventListener('click', () => {
     `Gostaria de fazer o seguinte pedido:\n\n` +
     linhas.join('\n') +
     `\n\n*Total: ${formatarPreco(calcularTotal())}*\n\n` +
-    `Aguardo instruções para pagamento e entrega. O
+    `Aguardo instruções para pagamento e entrega.`;
+
+  const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, '_blank');
+});
+
+// -------- INICIALIZAÇÃO --------
+renderFiltros();
+renderProdutos();
+renderCarrinho();
