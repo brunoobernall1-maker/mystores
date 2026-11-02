@@ -1,296 +1,331 @@
-// ============================================================
-//  ESSÊNCIA ELEGANTE — produtos.js
-//  Edite os produtos abaixo conforme sua necessidade.
-// ============================================================
+// ============================================
+// 🛍️ EDITE AQUI SEUS PRODUTOS
+// ============================================
+// Campos:
+//   nome      → nome exibido no card
+//   categoria → define os filtros automaticamente
+//   descricao → descrição curta (tipo de perfume)
+//   preco     → apenas números (ex: 289.90)
+//   imagem    → link ou "imagens/foto.jpg"
+// ============================================
 
 const produtos = [
   {
-    id: 1,
-    nome: "Eau de Parfum Noir",
-    categoria: "Perfume",
-    preco: 289.90,
-    descricao: "Notas amadeiradas e âmbar",
-    imagem: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=600&auto=format&fit=crop",
-    badge: "Novo"
+    nome: "Queen of Arabia",
+    categoria: "Decants",
+    descricao: "Lataffa · Feminino · 2ml",
+    preco: 34.90,
+    imagem: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80"
   },
   {
-    id: 2,
-    nome: "Brisa Floral",
-    categoria: "Perfume",
-    preco: 199.90,
-    descricao: "Fragrância leve e romântica",
-    imagem: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600&auto=format&fit=crop",
-    badge: ""
+    nome: "Delina",
+    categoria: "Decants",
+    descricao: "Parfums de Marly · Feminino · 5ml",
+    preco: 110.90,
+    imagem: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80"
   },
   {
-    id: 3,
-    nome: "Âmbar Dourado",
-    categoria: "Perfume",
-    preco: 349.90,
-    descricao: "Intenso, sofisticado e marcante",
-    imagem: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600&auto=format&fit=crop",
-    badge: "Best-seller"
+    nome: "Atheeri",
+    categoria: "Decants",
+    descricao: "Lataffa · Feminino · 2ml",
+    preco: 34.90,
+    imagem: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80"
   },
   {
-    id: 4,
-    nome: "Colar Ponto de Luz",
-    categoria: "Acessório",
-    preco: 129.90,
-    descricao: "Banho de ouro 18k",
-    imagem: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
-    badge: ""
+    nome: "Miss Dior Blooming",
+    categoria: "Designer",
+    descricao: "Dior · Feminino · 2ml",
+    preco: 46.90,
+    imagem: "https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&q=80"
   },
   {
-    id: 5,
-    nome: "Pulseira Riviera",
-    categoria: "Acessório",
+    nome: "La Bomba",
+    categoria: "Designer",
+    descricao: "Carolina Herrera · Feminino · 2ml",
+    preco: 50.90,
+    imagem: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80"
+  },
+  {
+    nome: "Oud Royal",
+    categoria: "Árabes",
+    descricao: "Oriental · Masculino · 5ml",
     preco: 89.90,
-    descricao: "Aço inoxidável dourado",
-    imagem: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop",
-    badge: ""
+    imagem: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=600&q=80"
   },
   {
-    id: 6,
-    nome: "Kit Presente Deluxe",
-    categoria: "Kit",
-    preco: 459.90,
-    descricao: "Perfume + nécessaire + cartão",
-    imagem: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600&auto=format&fit=crop",
-    badge: "Exclusivo"
+    nome: "Ameerat Al Arab",
+    categoria: "Árabes",
+    descricao: "Asdaaf · Feminino · 2ml",
+    preco: 25.90,
+    imagem: "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80"
   },
   {
-    id: 7,
-    nome: "Bruma Corporal",
-    categoria: "Corpo",
-    preco: 79.90,
-    descricao: "Hidratação com fragrância suave",
-    imagem: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=600&auto=format&fit=crop",
-    badge: ""
+    nome: "Erba Pura",
+    categoria: "Alta Perfumaria",
+    descricao: "Xerjoff · Unissex · 5ml",
+    preco: 90.90,
+    imagem: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80"
   },
   {
-    id: 8,
-    nome: "Vela Aromática",
-    categoria: "Casa",
-    preco: 69.90,
-    descricao: "Cera vegetal e pavio de algodão",
-    imagem: "https://images.unsplash.com/photo-1603006905003-be475563bc59?q=80&w=600&auto=format&fit=crop",
-    badge: ""
+    nome: "Delilah Blanc",
+    categoria: "Alta Perfumaria",
+    descricao: "Maison Alhambra · Feminino · 2ml",
+    preco: 25.90,
+    imagem: "https://images.unsplash.com/photo-1602874801006-e26c4c5b5e8a?w=600&q=80"
+  },
+  {
+    nome: "Kit Presente Luxo",
+    categoria: "Kits",
+    descricao: "Perfume + Hidratante + Bolsa",
+    preco: 399.90,
+    imagem: "https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=600&q=80"
   }
 ];
 
-// ============================================================
-//  ESTADO DO CARRINHO
-// ============================================================
-let carrinho = JSON.parse(localStorage.getItem('carrinhoEssencia')) || [];
+// ============================================
+// ⚙️ CONFIGURAÇÕES
+// ============================================
+const CONFIG = {
+  // ⚠️ COLOQUE SEU NÚMERO AQUI (só números, com 55+DDD)
+  whatsapp: "5511999999999",
+  nomeLoja: "Essência Elegante"
+};
 
-// ============================================================
-//  ELEMENTOS DO DOM
-// ============================================================
-const grid = document.getElementById('products-grid');
-const filtersContainer = document.getElementById('filters');
-const cartCount = document.getElementById('cart-count');
-const cartItems = document.getElementById('cart-items');
-const cartTotal = document.getElementById('cart-total');
-const cartSidebar = document.getElementById('cart-sidebar');
-const cartOverlay = document.getElementById('cart-overlay');
-const openCartBtn = document.getElementById('open-cart');
-const closeCartBtn = document.getElementById('close-cart');
-const finalizarBtn = document.getElementById('finalizar-whatsapp');
+// ============================================
+// 🧠 LÓGICA (não precisa mexer)
+// ============================================
+let carrinho = [];
+let categoriaAtiva = "Todos";
+let buscaAtiva = "";
 
-// ============================================================
-//  RENDERIZAÇÃO DOS PRODUTOS
-// ============================================================
-function renderizarProdutos(filtro = 'Todos') {
-  if (!grid) return;
-  const lista = filtro === 'Todos'
-    ? produtos
-    : produtos.filter(p => p.categoria === filtro);
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => document.querySelectorAll(s);
 
-  grid.innerHTML = lista.map(p => `
-    <div class="product-card">
-      <div class="product-image-wrapper">
-        <img src="${p.imagem}" alt="${p.nome}" class="product-image" loading="lazy">
-        ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
-      </div>
-      <div class="product-info">
-        <div class="product-category">${p.categoria}</div>
-        <h3 class="product-name">${p.nome}</h3>
-        <p class="product-desc">${p.descricao}</p>
-        <div class="product-price">R$ ${p.preco.toFixed(2).replace('.', ',')}</div>
-        <button class="add-to-cart" data-id="${p.id}">Adicionar ao Carrinho</button>
-      </div>
-    </div>
-  `).join('');
+const fmt = (n) => "R$ " + n.toFixed(2).replace(".", ",");
 
-  // Eventos dos botões "Adicionar"
-  document.querySelectorAll('.add-to-cart').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = parseInt(btn.dataset.id);
-      adicionarAoCarrinho(id);
+// ===== NAV (desktop + mobile) =====
+function renderNav() {
+  const cats = ["Todos", ...new Set(produtos.map(p => p.categoria))];
+  const navList = $("#nav-list");
+  const mobileList = $("#mobile-menu-list");
+  navList.innerHTML = "";
+  mobileList.innerHTML = "";
+
+  cats.forEach(cat => {
+    // Desktop
+    const li = document.createElement("li");
+    li.className = "nav-item" + (cat === categoriaAtiva ? " active" : "");
+    const btn = document.createElement("button");
+    btn.className = "nav-link";
+    btn.textContent = cat === "Todos" ? "Início" : cat;
+    btn.addEventListener("click", () => {
+      categoriaAtiva = cat;
+      renderNav();
+      renderFiltros();
+      renderProdutos();
+      document.getElementById("produtos").scrollIntoView({ behavior: "smooth" });
     });
+    li.appendChild(btn);
+    navList.appendChild(li);
+
+    // Mobile
+    const mBtn = document.createElement("button");
+    mBtn.textContent = cat === "Todos" ? "Início" : cat;
+    mBtn.addEventListener("click", () => {
+      categoriaAtiva = cat;
+      renderNav();
+      renderFiltros();
+      renderProdutos();
+      fecharMenuMobile();
+      document.getElementById("produtos").scrollIntoView({ behavior: "smooth" });
+    });
+    mobileList.appendChild(mBtn);
   });
 }
 
-// ============================================================
-//  FILTROS
-// ============================================================
-function renderizarFiltros() {
-  if (!filtersContainer) return;
-  const categorias = ['Todos', ...new Set(produtos.map(p => p.categoria))];
-  filtersContainer.innerHTML = categorias.map(cat => `
-    <button class="filter-btn ${cat === 'Todos' ? 'active' : ''}" data-cat="${cat}">${cat}</button>
-  `).join('');
-
-  filtersContainer.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      filtersContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderizarProdutos(btn.dataset.cat);
+// ===== FILTROS =====
+function renderFiltros() {
+  const cats = ["Todos", ...new Set(produtos.map(p => p.categoria))];
+  const el = $("#filters");
+  el.innerHTML = "";
+  cats.forEach(cat => {
+    const b = document.createElement("button");
+    b.className = "filter-btn" + (cat === categoriaAtiva ? " active" : "");
+    b.textContent = cat;
+    b.addEventListener("click", () => {
+      categoriaAtiva = cat;
+      renderNav();
+      renderFiltros();
+      renderProdutos();
     });
+    el.appendChild(b);
   });
 }
 
-// ============================================================
-//  CARRINHO — LÓGICA
-// ============================================================
-function salvarCarrinho() {
-  localStorage.setItem('carrinhoEssencia', JSON.stringify(carrinho));
-  atualizarCarrinho();
-}
+// ===== PRODUTOS =====
+function renderProdutos() {
+  const grid = $("#products-grid");
+  grid.innerHTML = "";
 
-function adicionarAoCarrinho(id) {
-  const produto = produtos.find(p => p.id === id);
-  if (!produto) return;
-
-  const itemExistente = carrinho.find(item => item.id === id);
-  if (itemExistente) {
-    itemExistente.quantidade += 1;
-  } else {
-    carrinho.push({
-      id: produto.id,
-      nome: produto.nome,
-      preco: produto.preco,
-      imagem: produto.imagem,
-      quantidade: 1
-    });
+  let filtrados = produtos;
+  if (categoriaAtiva !== "Todos") {
+    filtrados = filtrados.filter(p => p.categoria === categoriaAtiva);
   }
-  salvarCarrinho();
-  abrirCarrinho();
-}
-
-function removerDoCarrinho(id) {
-  carrinho = carrinho.filter(item => item.id !== id);
-  salvarCarrinho();
-}
-
-function alterarQuantidade(id, delta) {
-  const item = carrinho.find(i => i.id === id);
-  if (!item) return;
-  item.quantidade += delta;
-  if (item.quantidade <= 0) {
-    removerDoCarrinho(id);
-  } else {
-    salvarCarrinho();
+  if (buscaAtiva.trim()) {
+    const q = buscaAtiva.toLowerCase().trim();
+    filtrados = filtrados.filter(p =>
+      p.nome.toLowerCase().includes(q) ||
+      p.descricao.toLowerCase().includes(q) ||
+      p.categoria.toLowerCase().includes(q)
+    );
   }
-}
 
-function calcularTotal() {
-  return carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
-}
-
-// ============================================================
-//  ATUALIZAÇÃO VISUAL DO CARRINHO
-// ============================================================
-function atualizarCarrinho() {
-  // Contador
-  const totalItens = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
-  if (cartCount) cartCount.textContent = totalItens;
-
-  // Lista
-  if (!cartItems) return;
-  if (carrinho.length === 0) {
-    cartItems.innerHTML = `<div class="cart-empty">Seu carrinho está vazio.<br>Adicione produtos para começar ✨</div>`;
-    if (finalizarBtn) finalizarBtn.disabled = true;
-    if (cartTotal) cartTotal.textContent = 'R$ 0,00';
+  if (filtrados.length === 0) {
+    grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:#888;padding:50px;">Nenhum produto encontrado.</p>`;
     return;
   }
 
-  cartItems.innerHTML = carrinho.map(item => `
-    <div class="cart-item">
-      <img src="${item.imagem}" alt="${item.nome}">
-      <div class="cart-item-info">
-        <div class="cart-item-name">${item.nome}</div>
-        <div class="cart-item-price">R$ ${item.preco.toFixed(2).replace('.', ',')}</div>
-        <div class="cart-item-controls">
-          <button class="qty-btn" data-action="decrement" data-id="${item.id}">−</button>
-          <span class="qty-value">${item.quantidade}</span>
-          <button class="qty-btn" data-action="increment" data-id="${item.id}">+</button>
-          <button class="remove-btn" data-id="${item.id}" title="Remover">&times;</button>
-        </div>
+  filtrados.forEach(prod => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+      <img class="product-image" src="${prod.imagem}" alt="${prod.nome}" loading="lazy">
+      <div class="product-info">
+        <div class="product-cat">${prod.categoria}</div>
+        <div class="product-name">${prod.nome}</div>
+        <div class="product-desc">${prod.descricao}</div>
+        <div class="product-price">${fmt(prod.preco)}</div>
+        <button class="add-btn">Adicionar</button>
       </div>
-    </div>
-  `).join('');
+    `;
+    grid.appendChild(card);
 
-  // Eventos dos controles
-  cartItems.querySelectorAll('.qty-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = parseInt(btn.dataset.id);
-      const delta = btn.dataset.action === 'increment' ? 1 : -1;
-      alterarQuantidade(id, delta);
+    const b = card.querySelector(".add-btn");
+    b.addEventListener("click", () => {
+      adicionar(prod);
+      b.textContent = "Adicionado ✓";
+      b.style.background = "var(--rose)";
+      b.style.color = "#fff";
+      b.style.borderColor = "var(--rose)";
+      setTimeout(() => {
+        b.textContent = "Adicionar";
+        b.style.background = "transparent";
+        b.style.color = "var(--brown)";
+        b.style.borderColor = "var(--brown)";
+      }, 900);
     });
   });
-  cartItems.querySelectorAll('.remove-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      removerDoCarrinho(parseInt(btn.dataset.id));
-    });
-  });
-
-  // Total
-  const total = calcularTotal();
-  if (cartTotal) cartTotal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
-  if (finalizarBtn) finalizarBtn.disabled = carrinho.length === 0;
 }
 
-// ============================================================
-//  ABRIR / FECHAR CARRINHO
-// ============================================================
-function abrirCarrinho() {
-  if (cartSidebar) cartSidebar.classList.add('open');
-  if (cartOverlay) cartOverlay.classList.add('open');
+// ===== CARRINHO =====
+function adicionar(produto) {
+  const exist = carrinho.find(i => i.nome === produto.nome);
+  if (exist) exist.quantidade++;
+  else carrinho.push({ ...produto, quantidade: 1 });
+  renderCarrinho();
+  abrirCarrinho();
 }
 
-function fecharCarrinho() {
-  if (cartSidebar) cartSidebar.classList.remove('open');
-  if (cartOverlay) cartOverlay.classList.remove('open');
+function alterarQtd(nome, delta) {
+  const item = carrinho.find(i => i.nome === nome);
+  if (!item) return;
+  item.quantidade += delta;
+  if (item.quantidade <= 0) carrinho = carrinho.filter(i => i.nome !== nome);
+  renderCarrinho();
 }
 
-if (openCartBtn) openCartBtn.addEventListener('click', abrirCarrinho);
-if (closeCartBtn) closeCartBtn.addEventListener('click', fecharCarrinho);
-if (cartOverlay) cartOverlay.addEventListener('click', fecharCarrinho);
+function remover(nome) {
+  carrinho = carrinho.filter(i => i.nome !== nome);
+  renderCarrinho();
+}
 
-// ============================================================
-//  FINALIZAR NO WHATSAPP
-// ============================================================
-if (finalizarBtn) {
-  finalizarBtn.addEventListener('click', () => {
-    if (carrinho.length === 0) return;
+function total() {
+  return carrinho.reduce((s, i) => s + i.preco * i.quantidade, 0);
+}
 
-    const numeroWhatsApp = '5511999999999'; // <-- troque pelo seu número
-    let mensagem = 'Olá! Gostaria de finalizar meu pedido:\n\n';
+function renderCarrinho() {
+  const qtdTotal = carrinho.reduce((s, i) => s + i.quantidade, 0);
+  $("#cart-badge").textContent = qtdTotal;
+
+  const box = $("#cart-items");
+  const btnW = $("#finalizar-whatsapp");
+
+  if (carrinho.length === 0) {
+    box.innerHTML = '<div class="cart-empty">Seu carrinho está vazio.<br>Adicione produtos para começar ✨</div>';
+    btnW.disabled = true;
+  } else {
+    box.innerHTML = "";
     carrinho.forEach(item => {
-      mensagem += `• ${item.nome} — ${item.quantidade}x — R$ ${(item.preco * item.quantidade).toFixed(2).replace('.', ',')}\n`;
+      const el = document.createElement("div");
+      el.className = "cart-item";
+      el.innerHTML = `
+        <img src="${item.imagem}" alt="${item.nome}">
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.nome}</div>
+          <div class="cart-item-price">${fmt(item.preco)}</div>
+          <div class="cart-controls">
+            <button class="qty-btn" data-menos>−</button>
+            <span class="qty-val">${item.quantidade}</span>
+            <button class="qty-btn" data-mais>+</button>
+            <button class="remove-btn" data-rm><i class="fas fa-trash"></i></button>
+          </div>
+        </div>
+      `;
+      box.appendChild(el);
+      el.querySelector("[data-menos]").onclick = () => alterarQtd(item.nome, -1);
+      el.querySelector("[data-mais]").onclick = () => alterarQtd(item.nome, 1);
+      el.querySelector("[data-rm]").onclick = () => remover(item.nome);
     });
-    mensagem += `\nTotal: R$ ${calcularTotal().toFixed(2).replace('.', ',')}`;
-    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, '_blank');
-  });
+    btnW.disabled = false;
+  }
+
+  $("#cart-total").textContent = fmt(total());
 }
 
-// ============================================================
-//  INICIALIZAÇÃO
-// ============================================================
-document.addEventListener('DOMContentLoaded', () => {
-  renderizarProdutos();
-  renderizarFiltros();
-  atualizarCarrinho();
+// ===== ABRIR / FECHAR =====
+function abrirCarrinho() {
+  $("#cart-sidebar").classList.add("open");
+  $("#cart-overlay").classList.add("open");
+}
+function fecharCarrinho() {
+  $("#cart-sidebar").classList.remove("open");
+  $("#cart-overlay").classList.remove("open");
+}
+function abrirMenuMobile() {
+  $("#mobile-menu").classList.add("open");
+}
+function fecharMenuMobile() {
+  $("#mobile-menu").classList.remove("open");
+}
+
+// ===== WHATSAPP =====
+function finalizarWhats() {
+  if (carrinho.length === 0) return;
+  const linhas = carrinho.map(i => `• ${i.quantidade}x ${i.nome} — ${fmt(i.preco * i.quantidade)}`);
+  const msg =
+    `Olá, *${CONFIG.nomeLoja}*! 👋\n\n` +
+    `Gostaria de fazer o seguinte pedido:\n\n` +
+    linhas.join("\n") +
+    `\n\n*Total: ${fmt(total())}*\n\n` +
+    `Aguardo instruções para pagamento e entrega.`;
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, "_blank");
+}
+
+// ===== EVENTOS =====
+$("#open-cart").onclick = abrirCarrinho;
+$("#close-cart").onclick = fecharCarrinho;
+$("#cart-overlay").onclick = fecharCarrinho;
+$("#finalizar-whatsapp").onclick = finalizarWhats;
+$("#menu-toggle").onclick = abrirMenuMobile;
+$("#menu-close").onclick = fecharMenuMobile;
+
+$("#search-input").addEventListener("input", (e) => {
+  buscaAtiva = e.target.value;
+  renderProdutos();
 });
+
+// ===== INIT =====
+renderNav();
+renderFiltros();
+renderProdutos();
+renderCarrinho();
