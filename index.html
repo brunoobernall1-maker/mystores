@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PRISÉ | Perfumes e Cosméticos</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -16,7 +14,7 @@
     img { max-width: 100%; display: block; }
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-    /* HEADER E NAV */
+    /* HEADER */
     .adbar { background: #e8d8cc; color: #7a5c54; font-size: 11px; padding: 6px; text-align: center; border-bottom: 1px solid #d8c4bc; }
     header { background: #fff; border-bottom: 2px solid var(--rose); position: sticky; top: 0; z-index: 100; }
     .header-main { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; position: relative; }
@@ -56,11 +54,10 @@
     .add-btn { background: var(--rose); color: #fff; border: none; padding: 12px; font-size: 13px; font-weight: 600; border-radius: 8px; cursor: pointer; width: calc(100% - 28px); margin: 0 14px 14px 14px; transition: 0.2s; position: relative; z-index: 2; }
     .add-btn:hover { background: var(--rose-dark); }
 
-    /* BANNER E FOOTER */
     .banner-frete { background: #d8aea2; color: #fff; text-align: center; padding: 15px; font-size: 12px; margin: 40px 0; border-radius: 8px; }
     footer { background: #d9ada1; color: #fff; padding: 40px 0; text-align: center; }
 
-    /* CARRINHO LATERAL */
+    /* CARRINHO */
     .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); opacity: 0; visibility: hidden; transition: 0.3s; z-index: 200; }
     .cart-overlay.open { opacity: 1; visibility: visible; }
     .cart-sidebar { position: fixed; top: 0; right: 0; width: 100%; max-width: 380px; height: 100%; background: #fff; transform: translateX(100%); transition: 0.3s; z-index: 201; display: flex; flex-direction: column; }
@@ -73,7 +70,7 @@
     .cart-footer { padding: 20px; background: #fafafa; border-top: 1px solid var(--border); }
     .btn-whatsapp { width: 100%; background: #25D366; color: #fff; border: none; padding: 14px; font-weight: 600; border-radius: 8px; cursor: pointer; display: flex; justify-content: center; gap: 8px; }
     
-    /* MODAL DE DETALHES DO PRODUTO (A JANELA QUE ABRE) */
+    /* MODAL DE DETALHES */
     .product-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 500; display: none; align-items: center; justify-content: center; padding: 20px; }
     .product-modal.open { display: flex; }
     .modal-content { background: #fff; width: 100%; max-width: 900px; max-height: 90vh; overflow-y: auto; border-radius: 12px; position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 40px; }
@@ -139,7 +136,6 @@
 
   <footer><p>&copy; 2026 PRISÉ Perfumes e Cosméticos. Todos os direitos reservados.</p></footer>
 
-  <!-- CARRINHO LATERAL -->
   <div class="cart-overlay" id="cart-overlay"></div>
   <aside class="cart-sidebar" id="cart-sidebar">
     <div class="cart-header"><h3>Carrinho de compras</h3><button class="cart-close" id="close-cart"><i class="fas fa-times"></i></button></div>
@@ -150,24 +146,19 @@
     </div>
   </aside>
 
-  <!-- MODAL DE DETALHES DO PRODUTO -->
   <div class="product-modal" id="product-modal">
     <div class="modal-content">
       <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
-      <div class="modal-image">
-        <img id="modal-img" src="" alt="Produto">
-      </div>
+      <div class="modal-image"><img id="modal-img" src="" alt="Produto"></div>
       <div class="modal-info">
         <h2 class="modal-title" id="modal-name"></h2>
         <div class="modal-price" id="modal-price"></div>
         <div class="modal-installments" id="modal-installments"></div>
         <div class="modal-pix" id="modal-pix"></div>
-
         <div class="modal-sizes">
           <h4>Escolha o Tamanho:</h4>
           <div id="modal-size-options"></div>
         </div>
-
         <div class="modal-add-area">
           <div class="modal-qty">
             <button onclick="alterarQtdModal(-1)">−</button>
@@ -176,7 +167,6 @@
           </div>
           <button class="modal-buy-btn" onclick="adicionarModal()">Adicionar ao Carrinho</button>
         </div>
-
         <div class="modal-desc">
           <h3>Descrição Completa</h3>
           <p id="modal-desc"></p>
