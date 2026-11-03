@@ -3,956 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRISÉ | Perfumaria & Beleza</title>
-  <meta name="description" content="PRISÉ Perfumaria & Beleza — Decants e perfumes importados originais, com curadoria exclusiva.">
+  <title>Detalhes do Produto | PRISÉ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --nude: #faf6f4;
-      --nude-dark: #f2e8e4;
+      --nude-bg: #ffffff;
       --rose: #d8aea2;
       --rose-dark: #c49d96;
-      --brown: #6b4f4a;
-      --dark: #1f1f1f;
-      --gray: #6b6b6b;
-      --white: #fff;
+      --text-brown: #5a3c38;
+      --text-dark: #2f2f2f;
+      --gray: #7a7a7a;
+      --border: #e8d8cc;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--nude);
-      color: var(--dark);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    img { max-width: 100%; display: block; }
+    body { font-family: 'Poppins', sans-serif; background: var(--nude-bg); color: var(--text-dark); }
     a { text-decoration: none; color: inherit; }
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-    /* ===== BARRA DE ANÚNCIO ===== */
-    .adbar {
-      background: var(--rose);
-      color: #fff;
-      font-size: 11.5px;
-      letter-spacing: 0.5px;
-      padding: 8px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .adbar-track {
-      display: inline-block;
-      animation: marquee 35s linear infinite;
-    }
-    .adbar-track span {
-      display: inline-block;
-      padding: 0 32px;
-    }
-    .adbar-track i { margin-right: 6px; }
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+    /* HEADER SIMPLIFICADO */
+    header { border-bottom: 1px solid var(--border); padding: 15px 0; margin-bottom: 40px; text-align: center; }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--text-brown); letter-spacing: 4px; }
+    .logo span { display: block; font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 400; letter-spacing: 3px; color: var(--rose-dark); }
 
-    /* ===== HEADER ===== */
-    header {
-      background: var(--white);
-      border-bottom: 1px solid var(--nude-dark);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-main {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-      gap: 20px;
-    }
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
-      font-weight: 600;
-      color: var(--brown);
-      letter-spacing: 3px;
-      flex-shrink: 0;
-      line-height: 1.2;
-    }
-    .logo span {
-      display: block;
-      color: var(--rose);
-      font-style: italic;
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      margin-top: 2px;
-    }
-    .search-box {
-      flex: 1;
-      max-width: 340px;
-      position: relative;
-    }
-    .search-box input {
-      width: 100%;
-      padding: 10px 40px 10px 16px;
-      border: 1px solid var(--nude-dark);
-      border-radius: 40px;
-      font-family: inherit;
-      font-size: 13px;
-      background: var(--nude);
-      outline: none;
-      transition: 0.2s;
-    }
-    .search-box input:focus {
-      border-color: var(--rose);
-      background: #fff;
-    }
-    .search-box button {
-      position: absolute;
-      right: 4px;
-      top: 50%;
-      transform: translateY(-50%);
-      border: none;
-      background: var(--rose);
-      color: #fff;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 12px;
-      transition: 0.2s;
-    }
-    .search-box button:hover { background: var(--rose-dark); }
-    .header-icons {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-    }
-    .icon-btn {
-      background: none;
-      border: none;
-      color: var(--brown);
-      font-size: 18px;
-      cursor: pointer;
-      position: relative;
-      padding: 6px;
-      transition: 0.2s;
-    }
-    .icon-btn:hover { color: var(--rose); }
-    .cart-badge {
-      position: absolute;
-      top: -2px;
-      right: -6px;
-      background: var(--rose);
-      color: #fff;
-      font-size: 10px;
-      font-weight: 600;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    /* LAYOUT DO PRODUTO */
+    .product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 60px; }
+    .product-image-container { background: #fafafa; padding: 40px; border-radius: 12px; border: 1px solid var(--border); }
+    .product-image-container img { width: 100%; max-height: 500px; object-fit: contain; }
+    
+    .product-info-container { display: flex; flex-direction: column; justify-content: center; }
+    .product-title { font-size: 32px; font-weight: 500; line-height: 1.2; margin-bottom: 15px; }
+    .product-ref { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
+    .product-price-main { font-size: 28px; font-weight: 700; color: #111; margin-bottom: 5px; }
+    .product-installments { font-size: 15px; color: #444; margin-bottom: 5px; }
+    .product-pix { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 30px; }
+    .product-pix span { color: #4bb98c; } /* Verde para o PIX */
 
-    /* ===== NAV DESKTOP ===== */
-    .nav-bar {
-      background: var(--white);
-      border-top: 1px solid var(--nude-dark);
-    }
-    .nav-list {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      gap: 8px;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .nav-list::-webkit-scrollbar { display: none; }
-    .nav-item { position: relative; flex-shrink: 0; }
-    .nav-link {
-      display: block;
-      padding: 14px 20px;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--brown);
-      transition: 0.2s;
-      cursor: pointer;
-      background: none;
-      border: none;
-      font-family: inherit;
-    }
-    .nav-link:hover { color: var(--rose); background: var(--nude); }
-    .nav-item.active > .nav-link { color: var(--rose); }
-    .nav-item.active > .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      right: 20px;
-      height: 2px;
-      background: var(--rose);
-    }
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--brown);
-      font-size: 22px;
-      cursor: pointer;
-      padding: 6px;
-    }
+    /* SELETOR DE QUANTIDADE E BOTÃO */
+    .add-to-cart-area { display: flex; gap: 15px; margin-bottom: 30px; }
+    .qty-selector { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .qty-selector button { background: #fafafa; border: none; width: 40px; height: 48px; cursor: pointer; font-size: 16px; color: var(--text-brown); }
+    .qty-selector input { width: 50px; height: 48px; text-align: center; border: none; font-family: inherit; font-size: 16px; outline: none; }
+    .btn-buy { flex: 1; background: var(--rose); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; transition: 0.2s; text-transform: uppercase; }
+    .btn-buy:hover { background: var(--rose-dark); }
 
-    /* ===== HERO ===== */
-    .hero {
-      padding: 70px 0;
-      background: linear-gradient(135deg, var(--nude-dark) 0%, var(--nude) 100%);
-      text-align: center;
-    }
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 52px;
-      font-weight: 500;
-      line-height: 1.15;
-      color: var(--dark);
-      margin-bottom: 18px;
-      letter-spacing: -0.5px;
-    }
-    .hero h1 em { font-style: italic; color: var(--rose); }
-    .hero p {
-      font-size: 15px;
-      color: var(--gray);
-      max-width: 560px;
-      margin: 0 auto 28px;
-      font-weight: 300;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: var(--rose);
-      color: #fff;
-      padding: 14px 36px;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-      font-family: inherit;
-    }
-    .btn-primary:hover { background: var(--rose-dark); letter-spacing: 3px; }
+    /* DESCRIÇÃO */
+    .product-description { border-top: 1px solid var(--border); padding-top: 30px; margin-top: 20px; }
+    .product-description h3 { font-size: 18px; margin-bottom: 15px; color: var(--text-brown); }
+    .product-description p { font-size: 14px; color: var(--gray); line-height: 1.8; }
 
-    /* ===== TÍTULOS DE SEÇÃO ===== */
-    .section-title {
-      text-align: center;
-      margin: 60px 0 30px;
-    }
-    .section-title h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
-      font-weight: 500;
-      color: var(--dark);
-    }
-    .section-title h2 em { color: var(--rose); font-style: italic; }
-    .section-title .divider {
-      width: 60px;
-      height: 1px;
-      background: var(--rose);
-      margin: 16px auto 0;
-      position: relative;
-    }
-    .section-title .divider::before,
-    .section-title .divider::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 4px;
-      height: 4px;
-      background: var(--rose);
-      border-radius: 50%;
-      transform: translateY(-50%);
-    }
-    .section-title .divider::before { left: -10px; }
-    .section-title .divider::after { right: -10px; }
-
-    /* ===== FILTROS ===== */
-    .filters {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 40px;
-    }
-    .filter-btn {
-      background: transparent;
-      border: 1px solid var(--nude-dark);
-      padding: 9px 22px;
-      font-family: inherit;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--brown);
-      cursor: pointer;
-      border-radius: 40px;
-      transition: 0.2s;
-      font-weight: 500;
-    }
-    .filter-btn:hover { border-color: var(--rose); color: var(--rose); }
-    .filter-btn.active { background: var(--rose); border-color: var(--rose); color: #fff; }
-
-    /* ===== PRODUTOS ===== */
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 24px;
-      margin-bottom: 60px;
-    }
-    .product-card {
-      background: #fff;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid var(--nude-dark);
-      display: flex;
-      flex-direction: column;
-      transition: 0.3s;
-    }
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 30px -10px rgba(107, 79, 74, 0.15);
-    }
-    .product-image {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      background: var(--nude);
-    }
-    .product-info {
-      padding: 18px 16px 20px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      text-align: center;
-    }
-    .product-cat {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--rose);
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-    .product-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 19px;
-      font-weight: 600;
-      color: var(--dark);
-      line-height: 1.3;
-      margin-bottom: 8px;
-      min-height: 50px;
-    }
-    .product-desc {
-      font-size: 12px;
-      color: var(--gray);
-      margin-bottom: 12px;
-      font-weight: 300;
-    }
-    .product-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--brown);
-      margin-bottom: 14px;
-      margin-top: auto;
-    }
-    .add-btn {
-      background: transparent;
-      border: 1px solid var(--brown);
-      color: var(--brown);
-      padding: 10px;
-      font-family: inherit;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: 0.2s;
-      width: 100%;
-    }
-    .add-btn:hover { background: var(--brown); color: #fff; }
-
-    /* ===== BANNER MEIO ===== */
-    .mid-banner {
-      background: var(--brown);
-      color: var(--nude);
-      text-align: center;
-      padding: 50px 24px;
-      margin: 40px 0;
-    }
-    .mid-banner p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
-      font-style: italic;
-      letter-spacing: 0.5px;
-    }
-    .mid-banner i { color: var(--rose); margin: 0 12px; font-size: 18px; }
-
-    /* ===== FEATURES ===== */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin: 60px 0;
-      padding: 40px 30px;
-      background: #fff;
-      border: 1px solid var(--nude-dark);
-    }
-    .feature { text-align: center; }
-    .feature i {
-      font-size: 26px;
-      color: var(--rose);
-      margin-bottom: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      border: 1px solid var(--rose);
-      border-radius: 50%;
-    }
-    .feature h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 19px;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    .feature p { font-size: 12.5px; color: var(--gray); font-weight: 300; }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--rose);
-      color: #fff;
-      padding: 50px 0 20px;
-      margin-top: 40px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 30px;
-    }
-    .footer-brand h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      margin-bottom: 4px;
-      letter-spacing: 3px;
-    }
-    .footer-brand h3 + .footer-tagline {
-      font-style: italic;
-      font-size: 11px;
-      letter-spacing: 2px;
-      opacity: 0.85;
-      margin-bottom: 14px;
-    }
-    .footer-brand p {
-      font-size: 13px;
-      line-height: 1.7;
-      opacity: 0.9;
-      max-width: 300px;
-      font-weight: 300;
-    }
-    .footer-social {
-      display: flex;
-      gap: 12px;
-      margin-top: 18px;
-    }
-    .footer-social a {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-    .footer-social a:hover {
-      background: #fff;
-      color: var(--rose);
-      border-color: #fff;
-    }
-    .footer-col h4 {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-      font-weight: 500;
-    }
-    .footer-col ul { list-style: none; }
-    .footer-col li { margin-bottom: 10px; }
-    .footer-col a {
-      font-size: 13px;
-      opacity: 0.9;
-      font-weight: 300;
-      transition: 0.2s;
-    }
-    .footer-col a:hover { opacity: 1; padding-left: 4px; }
-    .footer-payments {
-      border-top: 1px solid rgba(255,255,255,0.2);
-      padding-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 16px;
-    }
-    .payment-badge {
-      background: #fff;
-      color: var(--brown);
-      padding: 6px 14px;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      border-radius: 3px;
-    }
-    .copyright {
-      text-align: center;
-      font-size: 11.5px;
-      opacity: 0.85;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,0.2);
-      font-weight: 300;
-    }
-
-    /* ===== CARRINHO LATERAL ===== */
-    .cart-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(31,31,31,0.5);
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.3s;
-      z-index: 200;
-    }
-    .cart-overlay.open { opacity: 1; visibility: visible; }
-    .cart-sidebar {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      max-width: 400px;
-      height: 100%;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      transform: translateX(100%);
-      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-      z-index: 201;
-    }
-    .cart-sidebar.open { transform: translateX(0); }
-    .cart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 22px;
-      border-bottom: 1px solid var(--nude-dark);
-    }
-    .cart-header h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      font-weight: 600;
-    }
-    .cart-close {
-      background: none;
-      border: none;
-      font-size: 20px;
-      cursor: pointer;
-      color: var(--dark);
-    }
-    .cart-close:hover { color: var(--rose); }
-    .cart-items {
-      flex: 1;
-      overflow-y: auto;
-      padding: 12px 22px;
-    }
-    .cart-empty {
-      text-align: center;
-      color: var(--gray);
-      padding: 50px 20px;
-      font-size: 13px;
-      font-weight: 300;
-      line-height: 1.8;
-    }
-    .cart-item {
-      display: flex;
-      gap: 12px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--nude-dark);
-    }
-    .cart-item img {
-      width: 64px;
-      height: 78px;
-      object-fit: cover;
-      border-radius: 3px;
-      background: var(--nude);
-    }
-    .cart-item-info { flex: 1; }
-    .cart-item-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 3px;
-    }
-    .cart-item-price {
-      font-size: 13px;
-      color: var(--rose);
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .cart-controls {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .qty-btn {
-      width: 26px;
-      height: 26px;
-      border: 1px solid var(--nude-dark);
-      background: #fff;
-      cursor: pointer;
-      font-size: 13px;
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: 0.2s;
-    }
-    .qty-btn:hover { background: var(--rose); color: #fff; border-color: var(--rose); }
-    .qty-val {
-      min-width: 24px;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .remove-btn {
-      margin-left: auto;
-      background: none;
-      border: none;
-      color: #c0392b;
-      cursor: pointer;
-      font-size: 12px;
-      padding: 4px;
-    }
-    .remove-btn:hover { opacity: 0.7; }
-    .cart-footer {
-      padding: 20px 22px;
-      border-top: 1px solid var(--nude-dark);
-      background: var(--nude);
-    }
-    .cart-total {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 14px;
-    }
-    .cart-total span { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gray); }
-    .cart-total strong {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
-      color: var(--rose);
-    }
-    .btn-whatsapp {
-      width: 100%;
-      background: #25D366;
-      color: #fff;
-      border: none;
-      padding: 14px;
-      font-family: inherit;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: 0.2s;
-    }
-    .btn-whatsapp:hover { background: #1ebe5a; }
-    .btn-whatsapp:disabled { background: #ccc; cursor: not-allowed; }
-
-    /* ===== MENU MOBILE ===== */
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #fff;
-      z-index: 300;
-      transform: translateX(-100%);
-      transition: transform 0.3s;
-      overflow-y: auto;
-    }
-    .mobile-menu.open { transform: translateX(0); }
-    .mobile-menu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 20px;
-      border-bottom: 1px solid var(--nude-dark);
-    }
-    .mobile-menu-list { list-style: none; padding: 10px 0; }
-    .mobile-menu-list button {
-      width: 100%;
-      text-align: left;
-      padding: 16px 24px;
-      background: none;
-      border: none;
-      border-bottom: 1px solid var(--nude-dark);
-      font-family: inherit;
-      font-size: 13px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--brown);
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    .mobile-menu-list button:hover { background: var(--nude); color: var(--rose); }
-
-    /* ===== BOTÃO WHATSAPP FLUTUANTE ===== */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 54px;
-      height: 54px;
-      background: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-      z-index: 90;
-      transition: 0.3s;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-      background: #1ebe5a;
-    }
-
-    /* ===== RESPONSIVO ===== */
-    @media (max-width: 900px) {
-      .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
-      .footer-brand p { margin: 0 auto; }
-      .footer-social { justify-content: center; }
-    }
     @media (max-width: 768px) {
-      .container { padding: 0 16px; }
-      .header-main { padding: 12px 0; gap: 10px; flex-wrap: nowrap; }
-      .search-box { max-width: 100%; flex: 1; }
-      .search-box input { font-size: 12px; padding: 8px 34px 8px 12px; }
-      .logo { font-size: 18px; letter-spacing: 2px; }
-      .logo span { font-size: 9px; letter-spacing: 1.5px; }
-      .header-icons { gap: 10px; }
-      .nav-bar { display: none; }
-      .menu-toggle { display: block; }
-      .hero h1 { font-size: 32px; }
-      .hero p { font-size: 13.5px; }
-      .section-title h2 { font-size: 26px; }
-      .products-grid { grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 12px; }
-      .product-name { font-size: 16px; min-height: 42px; }
-      .product-price { font-size: 18px; }
-      .add-btn { font-size: 10px; padding: 9px; }
-      .product-info { padding: 12px 10px 14px; }
-      .mid-banner p { font-size: 18px; }
-      .features { padding: 24px 16px; gap: 24px; }
-      .whatsapp-float { width: 48px; height: 48px; font-size: 22px; bottom: 16px; right: 16px; }
+      .product-detail { grid-template-columns: 1fr; gap: 30px; }
+      .product-title { font-size: 26px; }
+      .product-image-container { padding: 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- BARRA DE ANÚNCIO -->
-  <div class="adbar">
-    <div class="adbar-track">
-      <span><i class="fas fa-gift"></i> Aproveite o cupom <b>BEMVINDA</b></span>
-      <span><i class="fas fa-certificate"></i> Perfumes originais fracionados com segurança</span>
-      <span><i class="fas fa-truck"></i> Frete grátis nas compras acima de R$ 249</span>
-      <span><i class="fas fa-gift"></i> Aproveite o cupom <b>BEMVINDA</b></span>
-      <span><i class="fas fa-certificate"></i> Perfumes originais fracionados com segurança</span>
-      <span><i class="fas fa-truck"></i> Frete grátis nas compras acima de R$ 249</span>
-    </div>
-  </div>
-
-  <!-- HEADER -->
   <header>
-    <div class="container header-main">
-      <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <a href="index.html" class="logo">
-        PRISÉ
-        <span>Perfumaria &amp; Beleza</span>
-      </a>
-      <div class="search-box">
-        <input type="text" id="search-input" placeholder="Buscar perfume...">
-        <button aria-label="Buscar"><i class="fas fa-search"></i></button>
-      </div>
-      <div class="header-icons">
-        <button class="icon-btn" aria-label="Minha conta"><i class="far fa-user"></i></button>
-        <button class="icon-btn" id="open-cart" aria-label="Carrinho">
-          <i class="fas fa-shopping-bag"></i>
-          <span class="cart-badge" id="cart-badge">0</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- NAV DESKTOP -->
-    <nav class="nav-bar">
-      <ul class="nav-list" id="nav-list"></ul>
-    </nav>
+    <a href="index.html" class="logo">
+      PRISÉ
+      <span>PERFUMES E COSMÉTICOS</span>
+    </a>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1>Fragrâncias que <em>eternizam</em><br>memórias</h1>
-      <p>Descubra uma curadoria exclusiva de perfumes importados e decants originais, selecionados pela PRISÉ para quem valoriza elegância em cada detalhe.</p>
-      <a href="#produtos" class="btn-primary">Explorar Coleção</a>
-    </div>
-  </section>
-
-  <!-- PRODUTOS -->
-  <div class="container" id="produtos">
-    <div class="section-title">
-      <h2>Nossos <em>Favoritos</em></h2>
-      <div class="divider"></div>
-    </div>
-
-    <div class="filters" id="filters"></div>
-    <div class="products-grid" id="products-grid"></div>
-  </div>
-
-  <!-- BANNER MEIO -->
-  <div class="mid-banner">
-    <p><i class="fas fa-gem"></i> Frete grátis acima de R$ 249 <i class="fas fa-gem"></i></p>
-  </div>
-
-  <!-- FEATURES -->
-  <div class="container">
-    <div class="features">
-      <div class="feature">
-        <i class="fas fa-truck"></i>
-        <h4>Envio Rápido</h4>
-        <p>Entrega em até 3 dias úteis para todo o Brasil.</p>
+  <main class="container">
+    <div class="product-detail">
+      <!-- Imagem -->
+      <div class="product-image-container">
+        <img id="prod-img" src="" alt="Produto">
       </div>
-      <div class="feature">
-        <i class="fas fa-certificate"></i>
-        <h4>Produtos Originais</h4>
-        <p>100% autênticos, com garantia de procedência.</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-gift"></i>
-        <h4>Embalagem Premium</h4>
-        <p>Embalagem especial gratuita para presentes.</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>PRISÉ</h3>
-          <div class="footer-tagline">Perfumaria &amp; Beleza</div>
-          <p>Perfumes e decants originais que traduzem personalidade, sofisticação e momentos inesquecíveis.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <!-- Informações -->
+      <div class="product-info-container">
+        <h1 class="product-title" id="prod-name"></h1>
+        <p class="product-ref" id="prod-ref"></p>
+        
+        <div class="product-price-main" id="prod-price"></div>
+        <div class="product-installments" id="prod-installments"></div>
+        <div class="product-pix" id="prod-pix"></div>
+
+        <div class="add-to-cart-area">
+          <div class="qty-selector">
+            <button onclick="alterarQtd(-1)">−</button>
+            <input type="number" id="qty" value="1" min="1" readonly>
+            <button onclick="alterarQtd(1)">+</button>
           </div>
+          <button class="btn-buy" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
         </div>
-        <div class="footer-col">
-          <h4>Ajuda &amp; Suporte</h4>
-          <ul>
-            <li><a href="#">Política de Privacidade</a></li>
-            <li><a href="#">Trocas e Devoluções</a></li>
-            <li><a href="#">Rastrear Pedido</a></li>
-            <li><a href="#">Perguntas Frequentes</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Navegação</h4>
-          <ul>
-            <li><a href="#">Sobre a Marca</a></li>
-            <li><a href="#produtos">Produtos</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
+
+        <div class="product-description">
+          <h3>Descrição do Produto</h3>
+          <p id="prod-desc"></p>
         </div>
       </div>
-      <div class="footer-payments">
-        <span class="payment-badge">VISA</span>
-        <span class="payment-badge">MASTER</span>
-        <span class="payment-badge">AMEX</span>
-        <span class="payment-badge">ELO</span>
-        <span class="payment-badge">PIX</span>
-        <span class="payment-badge">BOLETO</span>
-      </div>
-      <div class="copyright">
-        &copy; 2026 PRISÉ Perfumaria &amp; Beleza. Todos os direitos reservados.
-      </div>
     </div>
-  </footer>
+  </main>
 
-  <!-- BOTÃO WHATSAPP FLUTUANTE -->
-  <a href="#" class="whatsapp-float" id="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <!-- CARRINHO LATERAL SIMPLIFICADO (Opcional, só para dar feedback) -->
+  <div id="toast" style="position:fixed; bottom:20px; right:20px; background:#4bb98c; color:#fff; padding:15px 25px; border-radius:8px; display:none; z-index:999;">Produto adicionado!</div>
 
-  <!-- MENU MOBILE -->
-  <aside class="mobile-menu" id="mobile-menu">
-    <div class="mobile-menu-header">
-      <span class="logo" style="letter-spacing:2px;">
-        PRISÉ
-        <span>Perfumaria &amp; Beleza</span>
-      </span>
-      <button class="cart-close" id="menu-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
-    </div>
-    <ul class="mobile-menu-list" id="mobile-menu-list"></ul>
-  </aside>
+  <script>
+    // Pega o ID do produto da URL (ex: produto.html?id=0)
+    const urlParams = new URLSearchParams(window.location.search);
+    const prodId = urlParams.get('id');
 
-  <!-- CARRINHO LATERAL -->
-  <div class="cart-overlay" id="cart-overlay"></div>
-  <aside class="cart-sidebar" id="cart-sidebar">
-    <div class="cart-header">
-      <h3>Meu Carrinho</h3>
-      <button class="cart-close" id="close-cart" aria-label="Fechar"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="cart-items" id="cart-items">
-      <div class="cart-empty">Seu carrinho está vazio.<br>Adicione produtos para começar ✨</div>
-    </div>
-    <div class="cart-footer">
-      <div class="cart-total">
-        <span>Total</span>
-        <strong id="cart-total">R$ 0,00</strong>
-      </div>
-      <button class="btn-whatsapp" id="finalizar-whatsapp" disabled>
-        <i class="fab fa-whatsapp"></i> Finalizar no WhatsApp
-      </button>
-    </div>
-  </aside>
+    // Variável global para guardar o produto atual
+    let produtoAtual = null;
 
+    // Função que roda ao carregar a página
+    window.onload = () => {
+      // Verifica se o ID existe e se a lista "produtos" (do produtos.js) foi carregada
+      if (prodId !== null && typeof produtos !== 'undefined' && produtos[prodId]) {
+        produtoAtual = produtos[prodId];
+        
+        // Preenche o HTML com os dados do produto
+        document.getElementById('prod-img').src = produtoAtual.imagem;
+        document.getElementById('prod-name').textContent = produtoAtual.nome;
+        document.getElementById('prod-ref').textContent = produtoAtual.descricao + " | Cód: " + prodId;
+        
+        // Preços formatados
+        const preco = produtoAtual.preco;
+        document.getElementById('prod-price').textContent = "R$ " + preco.toFixed(2).replace('.', ',');
+        document.getElementById('prod-installments').textContent = "3x de R$ " + (preco/3).toFixed(2).replace('.', ',') + " sem juros";
+        document.getElementById('prod-pix').innerHTML = "R$ " + (preco * 0.95).toFixed(2).replace('.', ',') + " <span>no PIX (5% OFF)</span>";
+        
+        // Descrição
+        document.getElementById('prod-desc').textContent = produtoAtual.descricaoLonga || "Uma fragrância marcante, ideal para o dia a dia. Produto original e de alta fixação, garantindo elegância e sofisticação para qualquer ocasião.";
+      } else {
+        // Se não achar o produto, volta pro index
+        window.location.href = "index.html";
+      }
+    };
+
+    // Altera a quantidade
+    function alterarQtd(valor) {
+      const input = document.getElementById('qty');
+      let qtd = parseInt(input.value) + valor;
+      if (qtd < 1) qtd = 1;
+      input.value = qtd;
+    }
+
+    // Adicionar ao carrinho (Usa o localStorage para salvar e depois o index lê)
+    function adicionarAoCarrinho() {
+      const qtd = parseInt(document.getElementById('qty').value);
+      
+      // Pega o carrinho atual do localStorage
+      let carrinho = JSON.parse(localStorage.getItem('prisе_carrinho')) || [];
+      
+      // Verifica se já existe
+      const index = carrinho.findIndex(i => i.nome === produtoAtual.nome);
+      if (index > -1) {
+        carrinho[index].quantidade += qtd;
+      } else {
+        carrinho.push({ ...produtoAtual, quantidade: qtd });
+      }
+      
+      // Salva de volta
+      localStorage.setItem('prisе_carrinho', JSON.stringify(carrinho));
+      
+      // Mostra mensagem de sucesso
+      const toast = document.getElementById('toast');
+      toast.style.display = 'block';
+      setTimeout(() => toast.style.display = 'none', 2000);
+    }
+  </script>
+
+  <!-- Importa o produtos.js para ter os dados -->
   <script src="produtos.js"></script>
 </body>
 </html>
