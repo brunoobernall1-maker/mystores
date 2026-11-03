@@ -195,4 +195,52 @@ function renderCarrinho() {
           <div style="display:flex; gap:8px; align-items:center; margin-top:5px;">
             <button style="border:1px solid #ddd; padding:2px 8px; cursor:pointer;" data-menos>−</button>
             <span>${item.quantidade}</span>
-            <button style="border:1px solid #ddd; padding:2px 8px; cursor:pointer;" data-mais>
+            <button style="border:1px solid #ddd; padding:2px 8px; cursor:pointer;" data-mais>+</button>
+            <button style="margin-left:auto; background:none; border:none; color:red; cursor:pointer;" data-rm><i class="fas fa-trash"></i></button>
+          </div>
+        </div>
+      `;
+      box.appendChild(el);
+      el.querySelector("[data-menos]").onclick = () => alterarQtd(item.nome, -1);
+      el.querySelector("[data-mais]").onclick = () => alterarQtd(item.nome, 1);
+      el.querySelector("[data-rm]").onclick = () => remover(item.nome);
+    });
+    btnW.disabled = false;
+  }
+  $("#cart-total").textContent = fmt(total());
+}
+
+function abrirCarrinho() {
+  $("#cart-sidebar").classList.add("open");
+  $("#cart-overlay").classList.add("open");
+}
+
+function finalizarWhats() {
+  if (carrinho.length === 0) return;
+  const linhas = carrinho.map(i => `• ${i.quantidade}x ${i.nome} — ${fmt(i.preco * i.quantidade)}`);
+  const msg = `Olá, *${CONFIG.nomeLoja}*! ✨\n\nGostaria de fazer o seguinte pedido:\n\n${linhas.join("\n")}\n\n*Total: ${fmt(total())}*\n\nAguardo as instruções para pagamento e entrega.`;
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, "_blank");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnOpenCart = $("#open-cart");
+  const btnCloseCart = $("#close-cart");
+  const overlay = $("#cart-overlay");
+  const btnWhats = $("#finalizar-whatsapp");
+  const btnModalClose = $("#modal-close");
+  const modalBg = $("#product-modal");
+
+  if(btnOpenCart) btnOpenCart.onclick = abrirCarrinho;
+  if(btnCloseCart) btnCloseCart.onclick = () => { $("#cart-sidebar").classList.remove("open"); if(overlay) overlay.classList.remove("open"); };
+  if(overlay) overlay.onclick = () => { $("#cart-sidebar").classList.remove("open"); overlay.classList.remove("open"); };
+  if(btnWhats) btnWhats.onclick = finalizarWhats;
+  
+  // Fechar modal ao clicar no X ou no fundo escuro
+  if(btnModalClose) btnModalClose.onclick = () => modalBg.classList.remove("open");
+  if(modalBg) modalBg.onclick = (e) => { if(e.target === modalBg) modalBg.classList.remove("open"); };
+
+  renderNav();
+  renderFiltros();
+  renderProdutos();
+  renderCarrinho();
+});
