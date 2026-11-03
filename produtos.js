@@ -1,98 +1,144 @@
 // ============================================
-// 🛍️ EDITE AQUI SEUS PRODUTOS
+// 🛍️ PRODUTOS - PRISÉ PERFUMES E COSMÉTICOS
 // ============================================
-// Campos:
-//   nome      → nome exibido no card
-//   categoria → define os filtros automaticamente
-//   descricao → descrição curta (tipo de perfume)
-//   preco     → apenas números (ex: 289.90)
-//   imagem    → link ou "imagens/foto.jpg"
-// ============================================
+// IMPORTANTE: Salve as fotos dos produtos na pasta "imagens/"
+// com os nomes exatos indicados abaixo (ex: light-blue.jpg).
 
 const produtos = [
+  // ===== PERFUMES FEMININOS =====
   {
-    nome: "Queen of Arabia",
-    categoria: "Decants",
-    descricao: "Lataffa · Feminino · 2ml",
-    preco: 34.90,
-    imagem: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80"
+    nome: "Dolce & Gabbana Light Blue",
+    categoria: "Femininos",
+    descricao: "Eau de Parfum · 100 ml",
+    preco: 299.90,
+    imagem: "imagens/light-blue.jpg" // 👈 Coloque a foto correspondente aqui
   },
   {
-    nome: "Delina",
-    categoria: "Decants",
-    descricao: "Parfums de Marly · Feminino · 5ml",
-    preco: 110.90,
-    imagem: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80"
+    nome: "Carolina Herrera 212 VIP Rosé",
+    categoria: "Femininos",
+    descricao: "Eau de Parfum · 50 ml",
+    preco: 349.90,
+    imagem: "imagens/212-vip-rose.jpg"
   },
   {
-    nome: "Atheeri",
-    categoria: "Decants",
-    descricao: "Lataffa · Feminino · 2ml",
-    preco: 34.90,
-    imagem: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80"
+    nome: "Dolce & Gabbana Devotion",
+    categoria: "Femininos",
+    descricao: "Eau de Parfum · 50 ml",
+    preco: 389.90,
+    imagem: "imagens/devotion.jpg"
   },
   {
-    nome: "Miss Dior Blooming",
-    categoria: "Designer",
-    descricao: "Dior · Feminino · 2ml",
-    preco: 46.90,
-    imagem: "https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&q=80"
+    nome: "Narciso Rodriguez For Her",
+    categoria: "Femininos",
+    descricao: "Eau de Toilette · 50 ml",
+    preco: 329.90,
+    imagem: "imagens/for-her.jpg"
   },
   {
-    nome: "La Bomba",
-    categoria: "Designer",
-    descricao: "Carolina Herrera · Feminino · 2ml",
-    preco: 50.90,
-    imagem: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80"
+    nome: "Moschino I Love Love",
+    categoria: "Femininos",
+    descricao: "Eau de Toilette · 100 ml",
+    preco: 259.90,
+    imagem: "imagens/i-love-love.jpg"
+  },
+
+  // ===== PERFUMES MASCULINOS =====
+  {
+    nome: "Dior Sauvage",
+    categoria: "Masculinos",
+    descricao: "Eau de Parfum · 60 ml",
+    preco: 459.90,
+    imagem: "imagens/sauvage.jpg"
   },
   {
-    nome: "Oud Royal",
-    categoria: "Árabes",
-    descricao: "Oriental · Masculino · 5ml",
+    nome: "Jean Paul Gaultier Le Male",
+    categoria: "Masculinos",
+    descricao: "Eau de Toilette · 75 ml",
+    preco: 379.90,
+    imagem: "imagens/le-male.jpg"
+  },
+  {
+    nome: "Paco Rabanne 1 Million",
+    categoria: "Masculinos",
+    descricao: "Eau de Toilette · 100 ml",
+    preco: 349.90,
+    imagem: "imagens/1-million.jpg"
+  },
+  {
+    nome: "Animale For Men",
+    categoria: "Masculinos",
+    descricao: "Eau de Toilette · 100 ml",
+    preco: 189.90,
+    imagem: "imagens/animale.jpg"
+  },
+  {
+    nome: "Calvin Klein CK One",
+    categoria: "Masculinos",
+    descricao: "Eau de Toilette · 100 ml",
+    preco: 249.90,
+    imagem: "imagens/ck-one.jpg"
+  },
+
+  // ===== BODY SPLASHES =====
+  {
+    nome: "Victoria's Secret Velvet Petals",
+    categoria: "Body Splash",
+    descricao: "Body Splash · 250 ml",
+    preco: 129.90,
+    imagem: "imagens/velvet-petals.jpg"
+  },
+  {
+    nome: "Victoria's Secret Bare Vanilla",
+    categoria: "Body Splash",
+    descricao: "Body Splash · 250 ml",
+    preco: 129.90,
+    imagem: "imagens/bare-vanilla.jpg"
+  },
+  {
+    nome: "Victoria's Secret Midnight Bloom",
+    categoria: "Body Splash",
+    descricao: "Body Splash · 250 ml",
+    preco: 129.90,
+    imagem: "imagens/midnight-bloom.jpg"
+  },
+
+  // ===== LOÇÃO CORPORAL =====
+  {
+    nome: "Mugler Angel",
+    categoria: "Loção Corporal",
+    descricao: "Loção Corporal · 200 ml",
+    preco: 219.90,
+    imagem: "imagens/mugler-angel.jpg"
+  },
+  {
+    nome: "Paco Rabanne Lady Million",
+    categoria: "Loção Corporal",
+    descricao: "Loção Corporal · 200 ml",
+    preco: 189.90,
+    imagem: "imagens/lady-million.jpg"
+  },
+
+  // ===== GEL CORPORAL =====
+  {
+    nome: "Hot Flowers Blow Girl",
+    categoria: "Gel Corporal",
+    descricao: "Gel Corporal · 320 ml",
     preco: 89.90,
-    imagem: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=600&q=80"
-  },
-  {
-    nome: "Ameerat Al Arab",
-    categoria: "Árabes",
-    descricao: "Asdaaf · Feminino · 2ml",
-    preco: 25.90,
-    imagem: "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80"
-  },
-  {
-    nome: "Erba Pura",
-    categoria: "Alta Perfumaria",
-    descricao: "Xerjoff · Unissex · 5ml",
-    preco: 90.90,
-    imagem: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80"
-  },
-  {
-    nome: "Delilah Blanc",
-    categoria: "Alta Perfumaria",
-    descricao: "Maison Alhambra · Feminino · 2ml",
-    preco: 25.90,
-    imagem: "https://images.unsplash.com/photo-1602874801006-e26c4c5b5e8a?w=600&q=80"
-  },
-  {
-    nome: "Kit Presente Luxo",
-    categoria: "Kits",
-    descricao: "Perfume + Hidratante + Bolsa",
-    preco: 399.90,
-    imagem: "https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=600&q=80"
+    imagem: "imagens/blow-girl.jpg"
   }
 ];
 
 // ============================================
-// ⚙️ CONFIGURAÇÕES
+// ⚙️ CONFIGURAÇÕES GERAIS
 // ============================================
 const CONFIG = {
-  // ⚠️ COLOQUE SEU NÚMERO AQUI (só números, com 55+DDD)
+  // ⚠️ COLOQUE SEU NÚMERO AQUI (com 55 + DDD)
   whatsapp: "5511999999999",
-  nomeLoja: "Essência Elegante"
+  nomeLoja: "PRISÉ Perfumes e Cosméticos"
 };
 
 // ============================================
-// 🧠 LÓGICA (não precisa mexer)
+// 🧠 LÓGICA (NÃO PRECISA MEXER DAQUI PARA BAIXO)
 // ============================================
 let carrinho = [];
 let categoriaAtiva = "Todos";
@@ -108,6 +154,8 @@ function renderNav() {
   const cats = ["Todos", ...new Set(produtos.map(p => p.categoria))];
   const navList = $("#nav-list");
   const mobileList = $("#mobile-menu-list");
+  if(!navList || !mobileList) return;
+  
   navList.innerHTML = "";
   mobileList.innerHTML = "";
 
@@ -136,7 +184,7 @@ function renderNav() {
       renderNav();
       renderFiltros();
       renderProdutos();
-      fecharMenuMobile();
+      if(typeof fecharMenuMobile === 'function') fecharMenuMobile();
       document.getElementById("produtos").scrollIntoView({ behavior: "smooth" });
     });
     mobileList.appendChild(mBtn);
@@ -147,7 +195,9 @@ function renderNav() {
 function renderFiltros() {
   const cats = ["Todos", ...new Set(produtos.map(p => p.categoria))];
   const el = $("#filters");
+  if(!el) return;
   el.innerHTML = "";
+  
   cats.forEach(cat => {
     const b = document.createElement("button");
     b.className = "filter-btn" + (cat === categoriaAtiva ? " active" : "");
@@ -165,6 +215,7 @@ function renderFiltros() {
 // ===== PRODUTOS =====
 function renderProdutos() {
   const grid = $("#products-grid");
+  if(!grid) return;
   grid.innerHTML = "";
 
   let filtrados = produtos;
@@ -189,7 +240,7 @@ function renderProdutos() {
     const card = document.createElement("div");
     card.className = "product-card";
     card.innerHTML = `
-      <img class="product-image" src="${prod.imagem}" alt="${prod.nome}" loading="lazy">
+      <img class="product-image" src="${prod.imagem}" alt="${prod.nome}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x400?text=Sem+Foto'">
       <div class="product-info">
         <div class="product-cat">${prod.categoria}</div>
         <div class="product-name">${prod.nome}</div>
@@ -223,7 +274,7 @@ function adicionar(produto) {
   if (exist) exist.quantidade++;
   else carrinho.push({ ...produto, quantidade: 1 });
   renderCarrinho();
-  abrirCarrinho();
+  if(typeof abrirCarrinho === 'function') abrirCarrinho();
 }
 
 function alterarQtd(nome, delta) {
@@ -245,10 +296,12 @@ function total() {
 
 function renderCarrinho() {
   const qtdTotal = carrinho.reduce((s, i) => s + i.quantidade, 0);
-  $("#cart-badge").textContent = qtdTotal;
+  const badge = $("#cart-badge");
+  if(badge) badge.textContent = qtdTotal;
 
   const box = $("#cart-items");
   const btnW = $("#finalizar-whatsapp");
+  if(!box || !btnW) return;
 
   if (carrinho.length === 0) {
     box.innerHTML = '<div class="cart-empty">Seu carrinho está vazio.<br>Adicione produtos para começar ✨</div>';
@@ -259,7 +312,7 @@ function renderCarrinho() {
       const el = document.createElement("div");
       el.className = "cart-item";
       el.innerHTML = `
-        <img src="${item.imagem}" alt="${item.nome}">
+        <img src="${item.imagem}" alt="${item.nome}" onerror="this.src='https://via.placeholder.com/100x120?text=Foto'">
         <div class="cart-item-info">
           <div class="cart-item-name">${item.nome}</div>
           <div class="cart-item-price">${fmt(item.preco)}</div>
@@ -279,53 +332,73 @@ function renderCarrinho() {
     btnW.disabled = false;
   }
 
-  $("#cart-total").textContent = fmt(total());
-}
-
-// ===== ABRIR / FECHAR =====
-function abrirCarrinho() {
-  $("#cart-sidebar").classList.add("open");
-  $("#cart-overlay").classList.add("open");
-}
-function fecharCarrinho() {
-  $("#cart-sidebar").classList.remove("open");
-  $("#cart-overlay").classList.remove("open");
-}
-function abrirMenuMobile() {
-  $("#mobile-menu").classList.add("open");
-}
-function fecharMenuMobile() {
-  $("#mobile-menu").classList.remove("open");
+  const totalEl = $("#cart-total");
+  if(totalEl) totalEl.textContent = fmt(total());
 }
 
 // ===== WHATSAPP =====
 function finalizarWhats() {
   if (carrinho.length === 0) return;
   const linhas = carrinho.map(i => `• ${i.quantidade}x ${i.nome} — ${fmt(i.preco * i.quantidade)}`);
+  
+  // AQUI ESTÁ A MENSAGEM COM O NOME DA LOJA
   const msg =
-    `Olá, *${CONFIG.nomeLoja}*! 👋\n\n` +
+    `Olá, *${CONFIG.nomeLoja}*! ✨\n\n` +
     `Gostaria de fazer o seguinte pedido:\n\n` +
     linhas.join("\n") +
     `\n\n*Total: ${fmt(total())}*\n\n` +
-    `Aguardo instruções para pagamento e entrega.`;
+    `Aguardo as instruções para pagamento e entrega.`;
+    
   window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, "_blank");
 }
 
 // ===== EVENTOS =====
-$("#open-cart").onclick = abrirCarrinho;
-$("#close-cart").onclick = fecharCarrinho;
-$("#cart-overlay").onclick = fecharCarrinho;
-$("#finalizar-whatsapp").onclick = finalizarWhats;
-$("#menu-toggle").onclick = abrirMenuMobile;
-$("#menu-close").onclick = fecharMenuMobile;
+document.addEventListener("DOMContentLoaded", () => {
+  const btnOpenCart = $("#open-cart");
+  const btnCloseCart = $("#close-cart");
+  const overlay = $("#cart-overlay");
+  const btnWhats = $("#finalizar-whatsapp");
+  const searchInput = $("#search-input");
+  const btnMenuToggle = $("#menu-toggle");
+  const btnMenuClose = $("#menu-close");
 
-$("#search-input").addEventListener("input", (e) => {
-  buscaAtiva = e.target.value;
+  if(btnOpenCart) btnOpenCart.onclick = () => {
+    $("#cart-sidebar").classList.add("open");
+    if(overlay) overlay.classList.add("open");
+  };
+  
+  if(btnCloseCart) btnCloseCart.onclick = () => {
+    $("#cart-sidebar").classList.remove("open");
+    if(overlay) overlay.classList.remove("open");
+  };
+  
+  if(overlay) overlay.onclick = () => {
+    $("#cart-sidebar").classList.remove("open");
+    overlay.classList.remove("open");
+  };
+  
+  if(btnWhats) btnWhats.onclick = finalizarWhats;
+
+  if(btnMenuToggle) btnMenuToggle.onclick = () => {
+    const menu = $("#mobile-menu");
+    if(menu) menu.classList.add("open");
+  };
+  
+  if(btnMenuClose) btnMenuClose.onclick = () => {
+    const menu = $("#mobile-menu");
+    if(menu) menu.classList.remove("open");
+  };
+
+  if(searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      buscaAtiva = e.target.value;
+      renderProdutos();
+    });
+  }
+
+  // Inicializa a página
+  renderNav();
+  renderFiltros();
   renderProdutos();
+  renderCarrinho();
 });
-
-// ===== INIT =====
-renderNav();
-renderFiltros();
-renderProdutos();
-renderCarrinho();
