@@ -1,12 +1,12 @@
 const produtos = [
-  { nome: "Narciso Rodriguez For Her EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "Narciso Rodriguez For Her é um clássico floral amadeirado. Ele combina a sensualidade do almíscar com notas de flor de laranjeira, jasmim e baunilha. É a escolha perfeita para mulheres elegantes que buscam uma fragrância marcante, sofisticada e com excelente fixação.", imagem: "imagens/narciso-for-her.jpg", variacoes: [{ tamanho: "2ml", preco: 34.90 }, { tamanho: "5ml", preco: 59.90 }, { tamanho: "10ml", preco: 99.90 }, { tamanho: "15ml", preco: 139.90 }] },
-  { nome: "Dolce & Gabbana Light Blue EDP", categoria: "Designer", descricao: "Eau de Parfum", descricaoLonga: "Light Blue é a essência do Mediterrâneo. Um perfume cítrico e floral com maçã verde da Sicília, limão siciliano e jasmim. Traz frescor, leveza e alegria para o dia a dia, sendo perfeito para dias quentes e ensolarados.", imagem: "imagens/light-blue.jpg", variacoes: [{ tamanho: "2ml", preco: 39.90 }, { tamanho: "5ml", preco: 69.90 }, { tamanho: "10ml", preco: 119.90 }, { tamanho: "15ml", preco: 169.90 }] },
-  { nome: "Jean Paul Gaultier Le Male EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "O icônico marinheiro. Le Male combina lavanda, hortelã e baunilha, resultando em um aroma marcante, sensual e inconfundível. Um clássico masculino que exala masculinidade e é ótimo para noites especiais e ocasiões românticas.", imagem: "imagens/le-male.jpg", variacoes: [{ tamanho: "2ml", preco: 37.90 }, { tamanho: "5ml", preco: 64.90 }, { tamanho: "10ml", preco: 109.90 }, { tamanho: "15ml", preco: 154.90 }] },
-  { nome: "Paco Rabanne 1 Million EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "1 Million é feito para o homem ousado. Uma fragrância amadeirada e especiada com notas de canela, âmbar e couro. É uma assinatura poderosa, que deixa rastro e marca presença por onde passa. Ideal para festas e baladas.", imagem: "imagens/1-million.jpg", variacoes: [{ tamanho: "2ml", preco: 35.90 }, { tamanho: "5ml", preco: 59.90 }, { tamanho: "10ml", preco: 99.90 }, { tamanho: "15ml", preco: 139.90 }] },
-  { nome: "Moschino I Love Love EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "I Love Love é uma explosão de alegria. Com notas de laranja, limão, groselha e musk, é uma fragrância cítrica floral jovem, romântica e divertida. A escolha perfeita para mulheres espontâneas e para o uso diário.", imagem: "imagens/i-love-love.jpg", variacoes: [{ tamanho: "2ml", preco: 28.90 }, { tamanho: "5ml", preco: 49.90 }, { tamanho: "10ml", preco: 84.90 }, { tamanho: "15ml", preco: 119.90 }] },
-  { nome: "Animale For Men EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "Animale For Men é um amadeirado aromático refrescante. Com bergamota, sândalo e âmbar, é um perfume fresco, moderno e masculino. Versátil, pode ser usado no trabalho ou em momentos casuais sem incomodar.", imagem: "imagens/animale.jpg", variacoes: [{ tamanho: "2ml", preco: 22.90 }, { tamanho: "5ml", preco: 39.90 }, { tamanho: "10ml", preco: 69.90 }, { tamanho: "15ml", preco: 99.90 }] },
-  { nome: "Dolce & Gabbana Devotion EDP", categoria: "Designer", descricao: "Eau de Parfum", descricaoLonga: "Devotion é um perfume gourmand que aquece o coração. A combinação de limão cristalizado, flor de laranjeira e baunilha cria um aroma doce, aconchegante e viciante. Perfeito para quem ama fragrâncias doces e marcantes.", imagem: "imagens/devotion.jpg", variacoes: [{ tamanho: "2ml", preco: 39.90 }, { tamanho: "5ml", preco: 69.90 }, { tamanho: "10ml", preco: 119.90 }, { tamanho: "15ml", preco: 169.90 }] },
-  { nome: "Christian Dior Sauvage EDP", categoria: "Designer", descricao: "Eau de Parfum", descricaoLonga: "Sauvage EDP é a personificação da masculinidade selvagem e nobre. Com uma explosão de bergamota da Calábria e o acorde exclusivo de ambroxan, é um perfume potente, amadeirado e inconfundível. Um best-seller absoluto.", imagem: "imagens/sauvage.jpg", variacoes: [{ tamanho: "2ml", preco: 45.90 }, { tamanho: "5ml", preco: 79.90 }, { tamanho: "10ml", preco: 139.90 }, { tamanho: "15ml", preco: 189.90 }] }
+  { nome: "Narciso Rodriguez For Her EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "Narciso Rodriguez For Her é um clássico floral amadeirado. Ele combina a sensualidade do almíscar com notas de flor de laranjeira, jasmim e baunilha. É a escolha perfeita para mulheres elegantes que buscam uma fragrância marcante, sofisticada e com excelente fixação.", imagem: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=500&q=80", variacoes: [{ tamanho: "2ml", preco: 34.90 }, { tamanho: "5ml", preco: 59.90 }, { tamanho: "10ml", preco: 99.90 }, { tamanho: "15ml", preco: 139.90 }] },
+  { nome: "Dolce & Gabbana Light Blue EDP", categoria: "Designer", descricao: "Eau de Parfum", descricaoLonga: "Light Blue é a essência do Mediterrâneo. Um perfume cítrico e floral com maçã verde da Sicília, limão siciliano e jasmim. Traz frescor, leveza e alegria para o dia a dia, sendo perfeito para dias quentes e ensolarados.", imagem: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500&q=80", variacoes: [{ tamanho: "2ml", preco: 39.90 }, { tamanho: "5ml", preco: 69.90 }, { tamanho: "10ml", preco: 119.90 }, { tamanho: "15ml", preco: 169.90 }] },
+  { nome: "Jean Paul Gaultier Le Male EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "O icônico marinheiro. Le Male combina lavanda, hortelã e baunilha, resultando em um aroma marcante, sensual e inconfundível. Um clássico masculino que exala masculinidade e é ótimo para noites especiais e ocasiões românticas.", imagem: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=500&q=80", variacoes: [{ tamanho: "2ml", preco: 37.90 }, { tamanho: "5ml", preco: 64.90 }, { tamanho: "10ml", preco: 109.90 }, { tamanho: "15ml", preco: 154.90 }] },
+  { nome: "Paco Rabanne 1 Million EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "1 Million é feito para o homem ousado. Uma fragrância amadeirada e especiada com notas de canela, âmbar e couro. É uma assinatura poderosa, que deixa rastro e marca presença por onde passa. Ideal para festas e baladas.", imagem: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500&q=80", variacoes: [{ tamanho: "2ml", preco: 35.90 }, { tamanho: "5ml", preco: 59.90 }, { tamanho: "10ml", preco: 99.90 }, { tamanho: "15ml", preco: 139.90 }] },
+  { nome: "Moschino I Love Love EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "I Love Love é uma explosão de alegria. Com notas de laranja, limão, groselha e musk, é uma fragrância cítrica floral jovem, romântica e divertida. A escolha perfeita para mulheres espontâneas e para o uso diário.", imagem: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=500&q=80", variacoes: [{ tamanho: "2ml", preco: 28.90 }, { tamanho: "5ml", preco: 49.90 }, { tamanho: "10ml", preco: 84.90 }, { tamanho: "15ml", preco: 119.90 }] },
+  { nome: "Animale For Men EDT", categoria: "Designer", descricao: "Eau de Toilette", descricaoLonga: "Animale For Men é um amadeirado aromático refrescante. Com bergamota, sândalo e âmbar, é um perfume fresco, moderno e masculino. Versátil, pode ser usado no trabalho ou em momentos casuais sem incomodar.", imagem: "https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=500&q=80", variacoes: [{ tamanho: "2ml", preco: 22.90 }, { tamanho: "5ml", preco: 39.90 }, { tamanho: "10ml", preco: 69.90 }, { tamanho: "15ml", preco: 99.90 }] },
+  { nome: "Dolce & Gabbana Devotion EDP", categoria: "Designer", descricao: "Eau de Parfum", descricaoLonga: "Devotion é um perfume gourmand que aquece o coração. A combinação de limão cristalizado, flor de laranjeira e baunilha cria um aroma doce, aconchegante e viciante. Perfeito para quem ama fragrâncias doces e marcantes.", imagem: "https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=500&q=80", variacoes: [{ tamanho: "2ml", preco: 39.90 }, { tamanho: "5ml", preco: 69.90 }, { tamanho: "10ml", preco: 119.90 }, { tamanho: "15ml", preco: 169.90 }] },
+  { nome: "Christian Dior Sauvage EDP", categoria: "Designer", descricao: "Eau de Parfum", descricaoLonga: "Sauvage EDP é a personificação da masculinidade selvagem e nobre. Com uma explosão de bergamota da Calábria e o acorde exclusivo de ambroxan, é um perfume potente, amadeirado e inconfundível. Um best-seller absoluto.", imagem: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=500&q=80", variacoes: [{ tamanho: "2ml", preco: 45.90 }, { tamanho: "5ml", preco: 79.90 }, { tamanho: "10ml", preco: 139.90 }, { tamanho: "15ml", preco: 189.90 }] }
 ];
 
 const CONFIG = { whatsapp: "5511999999999", nomeLoja: "PRISÉ Perfumes e Cosméticos" };
@@ -18,7 +18,6 @@ let variacaoSelecionadaModal = null;
 const $ = (s) => document.querySelector(s);
 const fmt = (n) => "R$ " + n.toFixed(2).replace(".", ",");
 
-// NAVEGAÇÃO
 function renderNav() {
   const navList = $("#nav-list"); if(!navList) return; navList.innerHTML = "";
   const menus = [
@@ -37,7 +36,6 @@ function renderNav() {
   });
 }
 
-// FILTROS
 function renderFiltros() {
   const cats = ["Todos", ...new Set(produtos.map(p => p.categoria))];
   const el = $("#filters"); if(!el) return; el.innerHTML = "";
@@ -50,7 +48,6 @@ function renderFiltros() {
   });
 }
 
-// PRODUTOS NA VITRINE
 function renderProdutos() {
   const grid = $("#products-grid"); if(!grid) return; grid.innerHTML = "";
   let filtrados = categoriaAtiva === "Todos" ? produtos : produtos.filter(p => p.categoria === categoriaAtiva);
@@ -79,7 +76,6 @@ function renderProdutos() {
   });
 }
 
-// ABRIR O MODAL DE DETALHES
 function abrirProdutoModal(index) {
   produtoAtualModal = produtos[index];
   $("#modal-img").src = produtoAtualModal.imagem;
@@ -101,7 +97,6 @@ function abrirProdutoModal(index) {
   $("#product-modal").classList.add("open");
 }
 
-// SELECIONAR TAMANHO NO MODAL
 function selecionarVariacaoModal(variacao, btnElement) {
   variacaoSelecionadaModal = variacao;
   document.querySelectorAll('#modal-size-options .size-btn').forEach(b => b.classList.remove('active'));
@@ -113,7 +108,6 @@ function selecionarVariacaoModal(variacao, btnElement) {
   $("#modal-pix").innerHTML = fmt(preco * 0.95) + " no PIX (5% OFF)";
 }
 
-// ALTERAR QTD NO MODAL
 function alterarQtdModal(valor) {
   const input = $("#modal-qty");
   let qtd = parseInt(input.value) + valor;
@@ -121,7 +115,6 @@ function alterarQtdModal(valor) {
   input.value = qtd;
 }
 
-// ADICIONAR AO CARRINHO VIA MODAL
 function adicionarModal() {
   const qtd = parseInt($("#modal-qty").value);
   const itemNome = `${produtoAtualModal.nome} - ${variacaoSelecionadaModal.tamanho}`;
@@ -140,7 +133,6 @@ function adicionarModal() {
   abrirCarrinho();
 }
 
-// ADICIONAR DIRETO DO CARD (RÁPIDO)
 function adicionar(index) {
   const produto = produtos[index];
   const menorOpcao = produto.variacoes[0];
@@ -162,7 +154,6 @@ function showToast() {
   setTimeout(() => toast.style.display = 'none', 2000);
 }
 
-// LÓGICA DO CARRINHO
 function alterarQtd(nome, delta) {
   const item = carrinho.find(i => i.nome === nome);
   if (!item) return;
@@ -204,5 +195,4 @@ function renderCarrinho() {
           <div style="display:flex; gap:8px; align-items:center; margin-top:5px;">
             <button style="border:1px solid #ddd; padding:2px 8px; cursor:pointer;" data-menos>−</button>
             <span>${item.quantidade}</span>
-            <button style="border:1px solid #ddd; padding:2px 8px; cursor:pointer;" data-mais>+</button>
-            <button style="margin-left:auto;
+            <button style="border:1px solid #ddd; padding:2px 8px; cursor:pointer;" data-mais>
