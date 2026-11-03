@@ -133,7 +133,7 @@ const produtos = [
 // ============================================
 const CONFIG = {
   // ⚠️ COLOQUE SEU NÚMERO AQUI (com 55 + DDD)
-  whatsapp: "5511999999999",
+  whatsapp: "5547984430089",
   nomeLoja: "PRISÉ Perfumes e Cosméticos"
 };
 
