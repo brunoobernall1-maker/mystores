@@ -2,66 +2,106 @@ const produtos = [
   { 
     nome: "Narciso Rodriguez For Her EDT", 
     categoria: "Designer", 
-    descricao: "Eau de Toilette · 50 ml", 
-    descricaoLonga: "Uma fragrância floral amadeirada que combina a sensualidade do almíscar com notas de flor de laranjeira e baunilha. Ideal para mulheres elegantes e marcantes.",
-    preco: 329.90, 
-    imagem: "imagens/narciso-for-her.jpg" 
+    descricao: "Eau de Toilette",
+    descricaoLonga: "Narciso Rodriguez For Her é um clássico floral amadeirado. Ele combina a sensualidade do almíscar com notas de flor de laranjeira, jasmim e baunilha. É a escolha perfeita para mulheres elegantes que buscam uma fragrância marcante, sofisticada e com excelente fixação.",
+    imagem: "imagens/narciso-for-her.jpg",
+    variacoes: [
+      { tamanho: "2ml", preco: 34.90 },
+      { tamanho: "5ml", preco: 59.90 },
+      { tamanho: "10ml", preco: 99.90 },
+      { tamanho: "15ml", preco: 139.90 }
+    ]
   },
   { 
     nome: "Dolce & Gabbana Light Blue EDP", 
     categoria: "Designer", 
-    descricao: "Eau de Parfum · 100 ml", 
-    descricaoLonga: "Um perfume cítrico e floral inspirado no Mediterrâneo. Notas de maçã verde, limão siciliano e jasmim trazem frescor e leveza para o seu dia a dia.",
-    preco: 399.90, 
-    imagem: "imagens/light-blue.jpg" 
+    descricao: "Eau de Parfum",
+    descricaoLonga: "Light Blue é a essência do Mediterrâneo. Um perfume cítrico e floral com maçã verde da Sicília, limão siciliano e jasmim. Traz frescor, leveza e alegria para o dia a dia, sendo perfeito para dias quentes e ensolarados.",
+    imagem: "imagens/light-blue.jpg",
+    variacoes: [
+      { tamanho: "2ml", preco: 39.90 },
+      { tamanho: "5ml", preco: 69.90 },
+      { tamanho: "10ml", preco: 119.90 },
+      { tamanho: "15ml", preco: 169.90 }
+    ]
   },
   { 
     nome: "Jean Paul Gaultier Le Male EDT", 
     categoria: "Designer", 
-    descricao: "Eau de Toilette · 75 ml", 
-    descricaoLonga: "Um clássico masculino com notas de lavanda, hortelã e baunilha. Aroma marcante, sensual e perfeito para noites especiais.",
-    preco: 379.90, 
-    imagem: "imagens/le-male.jpg" 
+    descricao: "Eau de Toilette",
+    descricaoLonga: "O icônico marinheiro. Le Male combina lavanda, hortelã e baunilha, resultando em um aroma marcante, sensual e inconfundível. Um clássico masculino que exala masculinidade e é ótimo para noites especiais e ocasiões românticas.",
+    imagem: "imagens/le-male.jpg",
+    variacoes: [
+      { tamanho: "2ml", preco: 37.90 },
+      { tamanho: "5ml", preco: 64.90 },
+      { tamanho: "10ml", preco: 109.90 },
+      { tamanho: "15ml", preco: 154.90 }
+    ]
   },
   { 
     nome: "Paco Rabanne 1 Million EDT", 
     categoria: "Designer", 
-    descricao: "Eau de Toilette · 100 ml", 
-    descricaoLonga: "Fragrância amadeirada e especiada, com toques de canela, âmbar e couro. Para o homem ousado que gosta de deixar sua presença marcada.",
-    preco: 349.90, 
-    imagem: "imagens/1-million.jpg" 
+    descricao: "Eau de Toilette",
+    descricaoLonga: "1 Million é feito para o homem ousado. Uma fragrância amadeirada e especiada com notas de canela, âmbar e couro. É uma assinatura poderosa, que deixa rastro e marca presença por onde passa. Ideal para festas e baladas.",
+    imagem: "imagens/1-million.jpg",
+    variacoes: [
+      { tamanho: "2ml", preco: 35.90 },
+      { tamanho: "5ml", preco: 59.90 },
+      { tamanho: "10ml", preco: 99.90 },
+      { tamanho: "15ml", preco: 139.90 }
+    ]
   },
   { 
     nome: "Moschino I Love Love EDT", 
     categoria: "Designer", 
-    descricao: "Eau de Toilette · 100 ml", 
-    descricaoLonga: "Alegre e vibrante, com notas de laranja, groselha e musk. Uma fragrância jovem e romântica, perfeita para o dia a dia.",
-    preco: 259.90, 
-    imagem: "imagens/i-love-love.jpg" 
+    descricao: "Eau de Toilette",
+    descricaoLonga: "I Love Love é uma explosão de alegria. Com notas de laranja, limão, groselha e musk, é uma fragrância cítrica floral jovem, romântica e divertida. A escolha perfeita para mulheres espontâneas e para o uso diário.",
+    imagem: "imagens/i-love-love.jpg",
+    variacoes: [
+      { tamanho: "2ml", preco: 28.90 },
+      { tamanho: "5ml", preco: 49.90 },
+      { tamanho: "10ml", preco: 84.90 },
+      { tamanho: "15ml", preco: 119.90 }
+    ]
   },
   { 
     nome: "Animale For Men EDT", 
     categoria: "Designer", 
-    descricao: "Eau de Toilette · 100 ml", 
-    descricaoLonga: "Um perfume amadeirado aromático com notas de bergamota e sândalo. Fresco e masculino, ideal para o trabalho ou momentos casuais.",
-    preco: 189.90, 
-    imagem: "imagens/animale.jpg" 
+    descricao: "Eau de Toilette",
+    descricaoLonga: "Animale For Men é um amadeirado aromático refrescante. Com bergamota, sândalo e âmbar, é um perfume fresco, moderno e masculino. Versátil, pode ser usado no trabalho ou em momentos casuais sem incomodar.",
+    imagem: "imagens/animale.jpg",
+    variacoes: [
+      { tamanho: "2ml", preco: 22.90 },
+      { tamanho: "5ml", preco: 39.90 },
+      { tamanho: "10ml", preco: 69.90 },
+      { tamanho: "15ml", preco: 99.90 }
+    ]
   },
   { 
     nome: "Dolce & Gabbana Devotion EDP", 
     categoria: "Designer", 
-    descricao: "Eau de Parfum · 50 ml", 
-    descricaoLonga: "Uma fragrância gourmand com notas de limão cristalizado, flor de laranjeira e baunilha. Doce na medida certa, transmite aconchego e devoção.",
-    preco: 389.90, 
-    imagem: "imagens/devotion.jpg" 
+    descricao: "Eau de Parfum",
+    descricaoLonga: "Devotion é um perfume gourmand que aquece o coração. A combinação de limão cristalizado, flor de laranjeira e baunilha cria um aroma doce, aconchegante e viciante. Perfeito para quem ama fragrâncias doces e marcantes.",
+    imagem: "imagens/devotion.jpg",
+    variacoes: [
+      { tamanho: "2ml", preco: 39.90 },
+      { tamanho: "5ml", preco: 69.90 },
+      { tamanho: "10ml", preco: 119.90 },
+      { tamanho: "15ml", preco: 169.90 }
+    ]
   },
   { 
     nome: "Christian Dior Sauvage EDP", 
     categoria: "Designer", 
-    descricao: "Eau de Parfum · 60 ml", 
-    descricaoLonga: "O perfume masculino mais icônico da atualidade. Notas de bergamota da Calábria e ambroxan criam uma assinatura selvagem, nobre e inconfundível.",
-    preco: 459.90, 
-    imagem: "imagens/sauvage.jpg" 
+    descricao: "Eau de Parfum",
+    descricaoLonga: "Sauvage EDP é a personificação da masculinidade selvagem e nobre. Com uma explosão de bergamota da Calábria e o acorde exclusivo de ambroxan, é um perfume potente, amadeirado e inconfundível. Um best-seller absoluto.",
+    imagem: "imagens/sauvage.jpg",
+    variacoes: [
+      { tamanho: "2ml", preco: 45.90 },
+      { tamanho: "5ml", preco: 79.90 },
+      { tamanho: "10ml", preco: 139.90 },
+      { tamanho: "15ml", preco: 189.90 }
+    ]
   }
 ];
 
@@ -83,10 +123,8 @@ function renderNav() {
   const menus = [
     { name: "Decants", subs: ["Decants Femininos", "Decants Masculino", "Decants Árabes"] },
     { name: "Designer", subs: ["Designer Feminino", "Designer Masculino"] },
-    { name: "Árabes", subs: ["Árabes Feminino", "Árabes Masculino"] },
-    { name: "Alta Perfumaria & Nicho", subs: ["Decants"] },
-    { name: "Perfumes Lacrados", subs: ["Lacrados Femininos", "Lacrados Masculinos"] },
-    { name: "Mais Produtos", subs: ["Victoria's Secret"] }
+    { name: "Árabes", subs: ["Árabes Femininos", "Árabes Masculinos"] },
+    { name: "Alta Perfumaria & Nicho", subs: ["Decants"] }
   ];
   menus.forEach(menu => {
     const li = document.createElement("li");
@@ -97,16 +135,8 @@ function renderNav() {
     li.appendChild(btn);
     const dropdown = document.createElement("div");
     dropdown.className = "dropdown-content";
-    const linkAll = document.createElement("a");
-    linkAll.href = "#produtos";
-    linkAll.textContent = `Ver tudo em ${menu.name}`;
-    dropdown.appendChild(linkAll);
-    menu.subs.forEach(sub => {
-      const a = document.createElement("a");
-      a.href = "#produtos";
-      a.textContent = sub;
-      dropdown.appendChild(a);
-    });
+    dropdown.innerHTML = `<a href="#produtos">Ver tudo em ${menu.name}</a>`;
+    menu.subs.forEach(sub => { dropdown.innerHTML += `<a href="#produtos">${sub}</a>`; });
     li.appendChild(dropdown);
     navList.appendChild(li);
   });
@@ -134,19 +164,21 @@ function renderProdutos() {
   let filtrados = categoriaAtiva === "Todos" ? produtos : produtos.filter(p => p.categoria === categoriaAtiva);
 
   filtrados.forEach((prod, index) => {
-    const card = document.createElement("a"); // Agora o card TODO é um link
-    card.href = `produto.html?id=${index}`; // Link para a página do produto
-    card.className = "product-card";
+    // Pega o menor preço para mostrar no card principal
+    const menorPreco = Math.min(...prod.variacoes.map(v => v.preco));
+    const parcela = menorPreco / 3;
+    const pix = menorPreco * 0.95;
     
-    // Cálculos de parcelamento e PIX
-    const parcela = prod.preco / 3;
-    const pix = prod.preco * 0.95;
+    const card = document.createElement("a");
+    card.href = `produto.html?id=${index}`;
+    card.className = "product-card";
     
     card.innerHTML = `
       <img class="product-image" src="${prod.imagem}" alt="${prod.nome}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x400?text=Sem+Foto'">
       <div class="product-info">
         <div class="product-name">${prod.nome}</div>
-        <div class="product-price">${fmt(prod.preco)}</div>
+        <div style="font-size:12px; color:#777; margin-bottom:5px;">A partir de:</div>
+        <div class="product-price">${fmt(menorPreco)}</div>
         <div class="installments">3x de ${fmt(parcela)} sem juros</div>
         <div class="pix-price">${fmt(pix)} com Pix</div>
         <button class="add-btn" onclick="event.preventDefault(); adicionar(${index}); this.textContent='Adicionado ✓'">Comprar</button>
@@ -158,11 +190,14 @@ function renderProdutos() {
 
 function adicionar(index) {
   const produto = produtos[index];
-  const exist = carrinho.find(i => i.nome === produto.nome);
-  if (exist) exist.quantidade++;
-  else carrinho.push({ ...produto, quantidade: 1 });
+  const menorOpcao = produto.variacoes[0]; // Adiciona a primeira opção (geralmente 2ml) por padrão
+  const itemNome = `${produto.nome} - ${menorOpcao.tamanho}`;
   
-  localStorage.setItem('prisе_carrinho', JSON.stringify(carrinho)); // Salva no navegador
+  const exist = carrinho.find(i => i.nome === itemNome);
+  if (exist) exist.quantidade++;
+  else carrinho.push({ nome: itemNome, preco: menorOpcao.preco, imagem: produto.imagem, quantidade: 1 });
+  
+  localStorage.setItem('prisе_carrinho', JSON.stringify(carrinho));
   renderCarrinho();
   abrirCarrinho();
 }
@@ -242,14 +277,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnWhats = $("#finalizar-whatsapp");
 
   if(btnOpenCart) btnOpenCart.onclick = abrirCarrinho;
-  if(btnCloseCart) btnCloseCart.onclick = () => {
-    $("#cart-sidebar").classList.remove("open");
-    if(overlay) overlay.classList.remove("open");
-  };
-  if(overlay) overlay.onclick = () => {
-    $("#cart-sidebar").classList.remove("open");
-    overlay.classList.remove("open");
-  };
+  if(btnCloseCart) btnCloseCart.onclick = () => { $("#cart-sidebar").classList.remove("open"); if(overlay) overlay.classList.remove("open"); };
+  if(overlay) overlay.onclick = () => { $("#cart-sidebar").classList.remove("open"); overlay.classList.remove("open"); };
   if(btnWhats) btnWhats.onclick = finalizarWhats;
 
   renderNav();
