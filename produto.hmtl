@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Produto | PRISÉ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --nude-bg: #ffffff;
+      --rose: #d8aea2;
+      --rose-dark: #c49d96;
+      --text-brown: #5a3c38;
+      --text-dark: #2f2f2f;
+      --gray: #7a7a7a;
+      --border: #e8d8cc;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: var(--nude-bg); color: var(--text-dark); }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* HEADER SIMPLIFICADO */
+    header { border-bottom: 1px solid var(--border); padding: 15px 0; margin-bottom: 40px; text-align: center; }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--text-brown); letter-spacing: 4px; }
+    .logo span { display: block; font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 400; letter-spacing: 3px; color: var(--rose-dark); }
+
+    /* LAYOUT DO PRODUTO */
+    .product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 60px; }
+    .product-image-container { background: #fafafa; padding: 40px; border-radius: 12px; border: 1px solid var(--border); }
+    .product-image-container img { width: 100%; max-height: 500px; object-fit: contain; }
+    
+    .product-info-container { display: flex; flex-direction: column; justify-content: center; }
+    .product-title { font-size: 32px; font-weight: 500; line-height: 1.2; margin-bottom: 15px; }
+    .product-ref { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
+    .product-price-main { font-size: 28px; font-weight: 700; color: #111; margin-bottom: 5px; }
+    .product-installments { font-size: 15px; color: #444; margin-bottom: 5px; }
+    .product-pix { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 30px; }
+    .product-pix span { color: #4bb98c; } /* Verde para o PIX */
+
+    /* SELETOR DE QUANTIDADE E BOTÃO */
+    .add-to-cart-area { display: flex; gap: 15px; margin-bottom: 30px; }
+    .qty-selector { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .qty-selector button { background: #fafafa; border: none; width: 40px; height: 48px; cursor: pointer; font-size: 16px; color: var(--text-brown); }
+    .qty-selector input { width: 50px; height: 48px; text-align: center; border: none; font-family: inherit; font-size: 16px; outline: none; }
+    .btn-buy { flex: 1; background: var(--rose); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; transition: 0.2s; text-transform: uppercase; }
+    .btn-buy:hover { background: var(--rose-dark); }
+
+    /* DESCRIÇÃO */
+    .product-description { border-top: 1px solid var(--border); padding-top: 30px; margin-top: 20px; }
+    .product-description h3 { font-size: 18px; margin-bottom: 15px; color: var(--text-brown); }
+    .product-description p { font-size: 14px; color: var(--gray); line-height: 1.8; }
+
+    @media (max-width: 768px) {
+      .product-detail { grid-template-columns: 1fr; gap: 30px; }
+      .product-title { font-size: 26px; }
+      .product-image-container { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      PRISÉ
+      <span>PERFUMES E COSMÉTICOS</span>
+    </a>
+  </header>
+
+  <main class="container">
+    <div class="product-detail">
+      <!-- Imagem -->
+      <div class="product-image-container">
+        <img id="prod-img" src="" alt="Produto">
+      </div>
+
+      <!-- Informações -->
+      <div class="product-info-container">
+        <h1 class="product-title" id="prod-name"></h1>
+        <p class="product-ref" id="prod-ref"></p>
+        
+        <div class="product-price-main" id="prod-price"></div>
+        <div class="product-installments" id="prod-installments"></div>
+        <div class="product-pix" id="prod-pix"></div>
+
+        <div class="add-to-cart-area">
+          <div class="qty-selector">
+            <button onclick="alterarQtd(-1)">−</button>
+            <input type="number" id="qty" value="1" min="1" readonly>
+            <button onclick="alterarQtd(1)">+</button>
+          </div>
+          <button class="btn-buy" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product-description">
+          <h3>Descrição do Produto</h3>
+          <p id="prod-desc"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- CARRINHO LATERAL SIMPLIFICADO (Opcional, só para dar feedback) -->
+  <div id="toast" style="position:fixed; bottom:20px; right:20px; background:#4bb98c; color:#fff; padding:15px 25px; border-radius:8px; display:none; z-index:999;">Produto adicionado!</div>
+
+  <script>
+    // Pega o ID do produto da URL (ex: produto.html?id=0)
+    const urlParams = new URLSearchParams(window.location.search);
+    const prodId = urlParams.get('id');
+
+    // Variável global para guardar o produto atual
+    let produtoAtual = null;
+
+    // Função que roda ao carregar a página
+    window.onload = () => {
+      // Verifica se o ID existe e se a lista "produtos" (do produtos.js) foi carregada
+      if (prodId !== null && typeof produtos !== 'undefined' && produtos[prodId]) {
+        produtoAtual = produtos[prodId];
+        
+        // Preenche o HTML com os dados do produto
+        document.getElementById('prod-img').src = produtoAtual.imagem;
+        document.getElementById('prod-name').textContent = produtoAtual.nome;
+        document.getElementById('prod-ref').textContent = produtoAtual.descricao + " | Cód: " + prodId;
+        
+        // Preços formatados
+        const preco = produtoAtual.preco;
+        document.getElementById('prod-price').textContent = "R$ " + preco.toFixed(2).replace('.', ',');
+        document.getElementById('prod-installments').textContent = "3x de R$ " + (preco/3).toFixed(2).replace('.', ',') + " sem juros";
+        document.getElementById('prod-pix').innerHTML = "R$ " + (preco * 0.95).toFixed(2).replace('.', ',') + " <span>no PIX (5% OFF)</span>";
+        
+        // Descrição
+        document.getElementById('prod-desc').textContent = produtoAtual.descricaoLonga || "Uma fragrância marcante, ideal para o dia a dia. Produto original e de alta fixação, garantindo elegância e sofisticação para qualquer ocasião.";
+      } else {
+        // Se não achar o produto, volta pro index
+        window.location.href = "index.html";
+      }
+    };
+
+    // Altera a quantidade
+    function alterarQtd(valor) {
+      const input = document.getElementById('qty');
+      let qtd = parseInt(input.value) + valor;
+      if (qtd < 1) qtd = 1;
+      input.value = qtd;
+    }
+
+    // Adicionar ao carrinho (Usa o localStorage para salvar e depois o index lê)
+    function adicionarAoCarrinho() {
+      const qtd = parseInt(document.getElementById('qty').value);
+      
+      // Pega o carrinho atual do localStorage
+      let carrinho = JSON.parse(localStorage.getItem('prisе_carrinho')) || [];
+      
+      // Verifica se já existe
+      const index = carrinho.findIndex(i => i.nome === produtoAtual.nome);
+      if (index > -1) {
+        carrinho[index].quantidade += qtd;
+      } else {
+        carrinho.push({ ...produtoAtual, quantidade: qtd });
+      }
+      
+      // Salva de volta
+      localStorage.setItem('prisе_carrinho', JSON.stringify(carrinho));
+      
+      // Mostra mensagem de sucesso
+      const toast = document.getElementById('toast');
+      toast.style.display = 'block';
+      setTimeout(() => toast.style.display = 'none', 2000);
+    }
+  </script>
+
+  <!-- Importa o produtos.js para ter os dados -->
+  <script src="produtos.js"></script>
+</body>
+</html>
